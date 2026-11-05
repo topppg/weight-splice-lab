@@ -1,0 +1,97 @@
+{
+  "args": {
+    "base": "runs/phase2/base.pt",
+    "budgets": "1000,3000,10000",
+    "train_max_n": 8,
+    "rank": 8,
+    "steps": 3000,
+    "batch_size": 64,
+    "lr": 0.003,
+    "full": false,
+    "replay": true,
+    "text_replay": true,
+    "text_len": 64,
+    "save_prefix": "runs/phase2/lora_replay_text",
+    "out": "runs/phase2/lora_replay_text_results.json"
+  },
+  "1000": {
+    "budget": 1000,
+    "examples": 3000,
+    "trainable_params": 245760,
+    "final_loss": 0.10490325838327408,
+    "seconds": 249.2774121761322,
+    "accuracy": {
+      "1": 0.79,
+      "2": 0.035,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 3.859668853712842,
+      "text_kl": 1.5247945711016655,
+      "task_copy": 0.9933333333333333,
+      "task_reverse": 0.9858333333333333,
+      "task_max": 0.905
+    }
+  },
+  "3000": {
+    "budget": 3000,
+    "examples": 9000,
+    "trainable_params": 245760,
+    "final_loss": 0.3894120752811432,
+    "seconds": 243.08461999893188,
+    "accuracy": {
+      "1": 0.44,
+      "2": 0.05,
+      "3": 0.015,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 3.3796200222197346,
+      "text_kl": 1.196874961256981,
+      "task_copy": 0.9941666666666666,
+      "task_reverse": 0.9941666666666666,
+      "task_max": 0.9616666666666667
+    }
+  },
+  "10000": {
+    "budget": 10000,
+    "examples": 30000,
+    "trainable_params": 245760,
+    "final_loss": 0.786970853805542,
+    "seconds": 248.33845019340515,
+    "accuracy": {
+      "1": 0.29,
+      "2": 0.07,
+      "3": 0.03,
+      "4": 0.005,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 2.752129142025313,
+      "text_kl": 0.7473700158298016,
+      "task_copy": 0.9983333333333333,
+      "task_reverse": 0.9991666666666666,
+      "task_max": 0.995
+    }
+  },
+  "peak_mps_gb": 0.078331904,
+  "peak_rss_gb": 1.350713344
+}

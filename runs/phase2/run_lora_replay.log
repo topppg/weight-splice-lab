@@ -1,0 +1,3 @@
+[gpu] budget 4.2 GB (available 8.1 GB)
+exit 0
+note: per-budget lines lost (git autostash rewrote this tracked log mid-run); numbers are in lora_replay_results.json

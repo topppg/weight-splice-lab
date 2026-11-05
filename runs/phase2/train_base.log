@@ -1,0 +1,64 @@
+[gpu] budget 4.4 GB (available 8.3 GB)
+params 5,140,480 budget 4.4 GB
+step      0 loss 4.6747 lr 1.00e-05 t 0s mps 1.24GB
+step    250 loss 1.7483 lr 2.00e-03 t 81s mps 1.24GB
+step    500 loss 1.3785 lr 1.96e-03 t 163s mps 1.24GB
+step    750 loss 1.3106 lr 1.88e-03 t 245s mps 1.24GB
+step   1000 loss 1.2933 lr 1.75e-03 t 326s mps 1.24GB
+step   1250 loss 1.3043 lr 1.59e-03 t 410s mps 1.24GB
+step   1500 loss 1.2562 lr 1.39e-03 t 493s mps 1.24GB
+step   1750 loss 1.2265 lr 1.18e-03 t 579s mps 1.24GB
+step   2000 loss 1.2406 lr 9.62e-04 t 662s mps 1.24GB
+step   2250 loss 1.2179 lr 7.48e-04 t 745s mps 1.24GB
+step   2500 loss 1.2144 lr 5.50e-04 t 829s mps 1.24GB
+step   2750 loss 1.1985 lr 3.78e-04 t 913s mps 1.24GB
+step   3000 loss 1.2006 lr 2.42e-04 t 998s mps 1.24GB
+step   3250 loss 1.1804 lr 1.49e-04 t 1082s mps 1.24GB
+step   3500 loss 1.1802 lr 1.04e-04 t 1169s mps 1.24GB
+step   3599 loss 1.1899 lr 1.00e-04 t 1202s mps 1.24GB
+{
+  "params": 5140480,
+  "model_cfg": {
+    "vocab_size": 99,
+    "d_model": 256,
+    "n_layers": 6,
+    "n_heads": 8,
+    "head_dim": 32,
+    "d_mlp": 768,
+    "rope_base": 10000.0,
+    "max_seq_len": 512,
+    "norm_eps": 1e-06
+  },
+  "train_cfg": {
+    "steps": 3600,
+    "batch_size": 64,
+    "micro_batch": 16,
+    "seq_len": 256,
+    "lr": 0.002,
+    "min_lr": 0.0001,
+    "warmup": 200,
+    "weight_decay": 0.1,
+    "text_frac": 0.5,
+    "seed": 0,
+    "log_every": 250
+  },
+  "final_train_loss": 1.1898565292358398,
+  "train_seconds": 1201.6312019824982,
+  "val_bpc": 1.7025944059552482,
+  "native_tasks": {
+    "copy": 1.0,
+    "reverse": 1.0,
+    "max": 1.0
+  },
+  "addition": {
+    "1": 0.1,
+    "2": 0.0,
+    "3": 0.005,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+  },
+  "peak_mps_gb": 1.27172608
+}

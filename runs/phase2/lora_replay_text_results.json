@@ -1,0 +1,101 @@
+{
+  "args": {
+    "base": "runs/phase2/base.pt",
+    "budgets": "1000,3000,10000",
+    "train_max_n": 8,
+    "rank": 8,
+    "steps": 3000,
+    "batch_size": 64,
+    "lr": 0.003,
+    "full": false,
+    "replay": true,
+    "text_replay": 16,
+    "text_pool": false,
+    "text_len": 64,
+    "save_prefix": "runs/phase2/lora_replay_text",
+    "out": "runs/phase2/lora_replay_text_results.json"
+  },
+  "1000": {
+    "budget": 1000,
+    "examples": 2000,
+    "fresh_text_windows": 48000,
+    "trainable_params": 245760,
+    "final_loss": 0.7758798599243164,
+    "seconds": 245.71632480621338,
+    "accuracy": {
+      "1": 0.84,
+      "2": 0.08,
+      "3": 0.015,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 2.369293880144457,
+      "text_kl": 0.4796592518687248,
+      "task_copy": 0.9991666666666666,
+      "task_reverse": 0.9833333333333333,
+      "task_max": 0.9425
+    }
+  },
+  "3000": {
+    "budget": 3000,
+    "examples": 6000,
+    "fresh_text_windows": 48000,
+    "trainable_params": 245760,
+    "final_loss": 0.7353318333625793,
+    "seconds": 236.60192489624023,
+    "accuracy": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 0.99,
+      "4": 1.0,
+      "5": 0.99,
+      "6": 1.0,
+      "7": 0.99,
+      "8": 0.98,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 2.312314275840353,
+      "text_kl": 0.4413033928722143,
+      "task_copy": 1.0,
+      "task_reverse": 0.9983333333333333,
+      "task_max": 0.9808333333333333
+    }
+  },
+  "10000": {
+    "budget": 10000,
+    "examples": 20000,
+    "fresh_text_windows": 48000,
+    "trainable_params": 245760,
+    "final_loss": 0.8372038006782532,
+    "seconds": 237.9427671432495,
+    "accuracy": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 0.99,
+      "5": 0.995,
+      "6": 0.98,
+      "7": 0.995,
+      "8": 0.065,
+      "9": 0.0,
+      "10": 0.0
+    },
+    "regression": {
+      "text_bpc": 2.4086456711939195,
+      "text_kl": 0.5129433516412973,
+      "task_copy": 1.0,
+      "task_reverse": 0.9975,
+      "task_max": 0.9975
+    }
+  },
+  "peak_mps_gb": 0.061554688,
+  "peak_rss_gb": 1.322090496
+}
