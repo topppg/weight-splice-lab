@@ -1,0 +1,34 @@
+[
+ {
+  "generated_tokens": 1024,
+  "seconds": 9.270350694656372,
+  "tokens_per_s": 110.45968310457289,
+  "batch_size": 1,
+  "max_tokens": 1024,
+  "peak_gb": 1.645536566
+ },
+ {
+  "generated_tokens": 16384,
+  "seconds": 29.61170268058777,
+  "tokens_per_s": 553.2947624366324,
+  "batch_size": 16,
+  "max_tokens": 1024,
+  "peak_gb": 3.139478554
+ },
+ {
+  "generated_tokens": 32768,
+  "seconds": 39.525728940963745,
+  "tokens_per_s": 829.0296188830016,
+  "batch_size": 32,
+  "max_tokens": 1024,
+  "peak_gb": 3.990032388
+ },
+ {
+  "generated_tokens": 65536,
+  "seconds": 79.5291039943695,
+  "tokens_per_s": 824.0505262657028,
+  "batch_size": 64,
+  "max_tokens": 1024,
+  "peak_gb": 6.543189968
+ }
+]

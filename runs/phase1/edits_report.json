@@ -1,0 +1,77 @@
+{
+ "p10c": {
+  "tensors": 30,
+  "changed_bf16_entries": 72986982,
+  "hashes_ok": true
+ },
+ "p25c": {
+  "tensors": 1,
+  "changed_bf16_entries": 262144,
+  "hashes_ok": true
+ },
+ "p50c": {
+  "tensors": 2,
+  "changed_bf16_entries": 130188,
+  "hashes_ok": true
+ },
+ "p50c_analysis": {
+  "layer15": {
+   "changed_columns": 64,
+   "columns_match_frozen_manifest": true,
+   "rank1_energy_share": 0.9999945399400907,
+   "implied_alpha": 6.000321105305704,
+   "touched_weights": 65536
+  },
+  "layer19": {
+   "changed_columns": 64,
+   "columns_match_frozen_manifest": true,
+   "rank1_energy_share": 0.9999913816717005,
+   "implied_alpha": 6.0001732486832955,
+   "touched_weights": 65536
+  },
+  "cos_u15_u19": 0.8490049043825749
+ },
+ "p10c_analysis": {
+  "matrices": 30,
+  "implied_alpha_min_max": [
+   1.49999986574413,
+   1.5000001727542365
+  ],
+  "abs_cos_between_directions_min": 0.40831996129820614
+ },
+ "p25c_analysis": {
+  "tensor": "model.language_model.layers.15.self_attn.o_proj.weight",
+  "zero_columns": [
+   1792,
+   2047
+  ],
+  "n_zero_columns": 256,
+  "head": 7
+ },
+ "recomputed_u": {
+  "token_lengths": [
+   124,
+   123,
+   131,
+   136,
+   107,
+   146,
+   98,
+   135
+  ],
+  "layer15": {
+   "abs_cos_with_published_u": 0.9999789258097896,
+   "top64_overlap_with_published": 64,
+   "from_u_changed_entries": 65184,
+   "from_u_entries_equal_to_published": 3628266,
+   "from_u_max_abs_diff_vs_published": 0.00048828125
+  },
+  "layer19": {
+   "abs_cos_with_published_u": 0.9999709708955766,
+   "top64_overlap_with_published": 63,
+   "from_u_changed_entries": 64790,
+   "from_u_entries_equal_to_published": 3630503,
+   "from_u_max_abs_diff_vs_published": 0.0029296875
+  }
+ }
+}
