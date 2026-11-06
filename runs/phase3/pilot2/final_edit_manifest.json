@@ -1,0 +1,386 @@
+{
+ "edit": 19,
+ "turn": 196,
+ "final": false,
+ "note": "Restore layer-1 length-gate background penalty from 5000 to 500 to recover short additions; strengthen final output background penalty to 1200000 with matching +0.70 threshold compensation. Retain BOS-null value rows and repaired broadcast fallback. Testing arithmetic recovery and remaining native leakage.",
+ "validation": {
+  "condition": "add_capacity",
+  "arch": {
+   "n_heads": [
+    10,
+    28,
+    9,
+    12,
+    8,
+    8
+   ],
+   "d_mlp": [
+    800,
+    808,
+    830,
+    790,
+    770,
+    808
+   ]
+  },
+  "added_heads": [
+   2,
+   20,
+   1,
+   4,
+   0,
+   0
+  ],
+  "added_neurons": [
+   32,
+   40,
+   62,
+   22,
+   2,
+   40
+  ],
+  "added_params": 1036800,
+  "tensors": {
+   "blocks.0.attn.k_proj.weight": {
+    "shape": [
+     320,
+     256
+    ],
+    "changed_entries": 1024,
+    "native_changed_entries": 0,
+    "delta_norm": 130756.742188,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.attn.o_proj.weight": {
+    "shape": [
+     256,
+     320
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 0.424264,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.attn.q_proj.weight": {
+    "shape": [
+     320,
+     256
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 4.386963,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.attn.v_proj.weight": {
+    "shape": [
+     320,
+     256
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 0.190739,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     800
+    ],
+    "changed_entries": 8192,
+    "native_changed_entries": 0,
+    "delta_norm": 36.012154,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.mlp.gate_proj.weight": {
+    "shape": [
+     800,
+     256
+    ],
+    "changed_entries": 8192,
+    "native_changed_entries": 0,
+    "delta_norm": 146454.28125,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.mlp.up_proj.weight": {
+    "shape": [
+     800,
+     256
+    ],
+    "changed_entries": 8192,
+    "native_changed_entries": 0,
+    "delta_norm": 11.755355,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.k_proj.weight": {
+    "shape": [
+     896,
+     256
+    ],
+    "changed_entries": 81920,
+    "native_changed_entries": 0,
+    "delta_norm": 408.944458,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.o_proj.weight": {
+    "shape": [
+     256,
+     896
+    ],
+    "changed_entries": 5376,
+    "native_changed_entries": 0,
+    "delta_norm": 2291.28833,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.q_proj.weight": {
+    "shape": [
+     896,
+     256
+    ],
+    "changed_entries": 158720,
+    "native_changed_entries": 0,
+    "delta_norm": 430.76709,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.v_proj.weight": {
+    "shape": [
+     896,
+     256
+    ],
+    "changed_entries": 5376,
+    "native_changed_entries": 0,
+    "delta_norm": 7.32233,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     808
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 98.821175,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.mlp.gate_proj.weight": {
+    "shape": [
+     808,
+     256
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 4347.363281,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.mlp.up_proj.weight": {
+    "shape": [
+     808,
+     256
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 0.426206,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.k_proj.weight": {
+    "shape": [
+     288,
+     256
+    ],
+    "changed_entries": 256,
+    "native_changed_entries": 0,
+    "delta_norm": 205.437454,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.o_proj.weight": {
+    "shape": [
+     256,
+     288
+    ],
+    "changed_entries": 5120,
+    "native_changed_entries": 0,
+    "delta_norm": 4472.13623,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.q_proj.weight": {
+    "shape": [
+     288,
+     256
+    ],
+    "changed_entries": 256,
+    "native_changed_entries": 0,
+    "delta_norm": 461.928192,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.v_proj.weight": {
+    "shape": [
+     288,
+     256
+    ],
+    "changed_entries": 5120,
+    "native_changed_entries": 0,
+    "delta_norm": 5.248413,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     830
+    ],
+    "changed_entries": 15872,
+    "native_changed_entries": 0,
+    "delta_norm": 280.734039,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.mlp.gate_proj.weight": {
+    "shape": [
+     830,
+     256
+    ],
+    "changed_entries": 15872,
+    "native_changed_entries": 0,
+    "delta_norm": 28676.394531,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.mlp.up_proj.weight": {
+    "shape": [
+     830,
+     256
+    ],
+    "changed_entries": 15872,
+    "native_changed_entries": 0,
+    "delta_norm": 8.425722,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.k_proj.weight": {
+    "shape": [
+     384,
+     256
+    ],
+    "changed_entries": 16384,
+    "native_changed_entries": 0,
+    "delta_norm": 356.248505,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.o_proj.weight": {
+    "shape": [
+     256,
+     384
+    ],
+    "changed_entries": 2048,
+    "native_changed_entries": 0,
+    "delta_norm": 2828.427979,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.q_proj.weight": {
+    "shape": [
+     384,
+     256
+    ],
+    "changed_entries": 31744,
+    "native_changed_entries": 0,
+    "delta_norm": 14511.131836,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.v_proj.weight": {
+    "shape": [
+     384,
+     256
+    ],
+    "changed_entries": 2048,
+    "native_changed_entries": 0,
+    "delta_norm": 47.274895,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     790
+    ],
+    "changed_entries": 5120,
+    "native_changed_entries": 0,
+    "delta_norm": 98.030685,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.mlp.gate_proj.weight": {
+    "shape": [
+     790,
+     256
+    ],
+    "changed_entries": 5632,
+    "native_changed_entries": 0,
+    "delta_norm": 16908.119141,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.mlp.up_proj.weight": {
+    "shape": [
+     790,
+     256
+    ],
+    "changed_entries": 5632,
+    "native_changed_entries": 0,
+    "delta_norm": 4.840789,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     770
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 278.388489,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.mlp.gate_proj.weight": {
+    "shape": [
+     770,
+     256
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 889.411438,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.mlp.up_proj.weight": {
+    "shape": [
+     770,
+     256
+    ],
+    "changed_entries": 512,
+    "native_changed_entries": 0,
+    "delta_norm": 1.40413,
+    "native_rel_change": 0.0
+   },
+   "blocks.5.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     808
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 863071.75,
+    "native_rel_change": 0.0
+   },
+   "blocks.5.mlp.gate_proj.weight": {
+    "shape": [
+     808,
+     256
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 2543151.5,
+    "native_rel_change": 0.0
+   },
+   "blocks.5.mlp.up_proj.weight": {
+    "shape": [
+     808,
+     256
+    ],
+    "changed_entries": 10240,
+    "native_changed_entries": 0,
+    "delta_norm": 5.290549,
+    "native_rel_change": 0.0
+   }
+  }
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "addition_by_n": {
+  "1": 0.1,
+  "2": 0.0,
+  "3": 0.005,
+  "4": 0.0,
+  "5": 0.0,
+  "6": 0.0,
+  "7": 0.0,
+  "8": 0.0,
+  "9": 0.0,
+  "10": 0.0,
+  "11": 0.0,
+  "12": 0.0,
+  "13": 0.0,
+  "14": 0.0,
+  "15": 0.0,
+  "16": 0.0,
+  "17": 0.0,
+  "18": 0.0,
+  "19": 0.0,
+  "20": 0.0
+ },
+ "addition_mean_n1_8": 0.013125000000000001,
+ "addition_mean_n9_20": 0.0,
+ "text_bpc": 1.7025943952063325,
+ "text_kl": 0.0,
+ "native": {
+  "copy": 1.0,
+  "reverse": 1.0,
+  "max": 1.0
+ },
+ "meets_bar": true,
+ "params": 5140480,
+ "n_per_length": 200,
+ "meets_primary_bar": false,
+ "meets_strict_bar": false,
+ "robustness": {
+  "thresholds": {
+   "a_prefixed_text_kl_lt": 0.05,
+   "b_termination_ge": 0.95,
+   "c_not_first_line_ge": 0.95
+  },
+  "a_prefixed_text": {
+   "kl": 0.0,
+   "bpc": 1.895787741642461,
+   "bpc_base": 1.895787741642461,
+   "n_chunks": 256,
+   "pass": true
+  },
+  "b_termination": {
+   "end_token": "\n",
+   "terminated": {
+    "by_n": {
+     "1": 0.0,
+     "2": 0.0,
+     "3": 0.0,
+     "4": 0.0,
+     "5": 0.0,
+     "6": 0.0,
+     "7": 0.0,
+     "8": 0.0
+    },
+    "mean": 0.0
+   },
+   "strict_accuracy": {
+    "by_n": {
+     "1": 0.0,
+     "2": 0.0,
+     "3": 0.0,
+     "4": 0.0,
+     "5": 0.0,
+     "6": 0.0,
+     "7": 0.0,
+     "8": 0.0
+    },
+    "mean": 0.0
+   },
+   "pass": false
+  },
+  "c_not_first_line": {
+   "after_native_lines": {
+    "by_n": {
+     "1": 0.075,
+     "2": 0.005,
+     "3": 0.0,
+     "4": 0.0,
+     "5": 0.0,
+     "6": 0.0,
+     "7": 0.0,
+     "8": 0.0
+    },
+    "mean": 0.01
+   },
+   "after_text": {
+    "by_n": {
+     "1": 0.0,
+     "2": 0.0,
+     "3": 0.0,
+     "4": 0.0,
+     "5": 0.0,
+     "6": 0.0,
+     "7": 0.0,
+     "8": 0.0
+    },
+    "mean": 0.0
+   },
+   "min_mean": 0.0,
+   "pass": false
+  },
+  "d_length_n21_30": {
+   "by_n": {
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0
+   },
+   "mean": 0.0
+  },
+  "e_native_weight_change": {
+   "total_rel": 0.0,
+   "max_rel": 0.0,
+   "changed_tensors": 0,
+   "n_tensors": 56,
+   "per_tensor_rel": {}
+  },
+  "f_added_params": {
+   "allocated": 0,
+   "nonzero": 0,
+   "inactive": 0,
+   "active": 0,
+   "nonzero_active": 0
+  }
+ },
+ "seconds": 168.3,
+ "edit": null
+}

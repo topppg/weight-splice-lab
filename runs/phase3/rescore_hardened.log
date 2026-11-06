@@ -1,0 +1,11 @@
+base: 168 s, rss 1.22 GB
+gated_splice_nmax8: 224 s, rss 1.22 GB
+ungated_splice_nmax20: 234 s, rss 1.22 GB
+pilot1b_edit16: 242 s, rss 1.22 GB
+lora_replay_native_b1000: 193 s, rss 1.05 GB
+lora_replay_native_b3000: 185 s, rss 1.05 GB
+lora_replay_native_b10000: 184 s, rss 1.05 GB
+lora_replay_text_b1000: 178 s, rss 1.05 GB
+lora_replay_text_b3000: 181 s, rss 1.05 GB
+lora_replay_text_b10000: 185 s, rss 1.11 GB
+exit 0

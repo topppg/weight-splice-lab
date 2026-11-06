@@ -1,0 +1,280 @@
+{
+ "edit": "<scratch>/pilot1b_copy/edit16.pt",
+ "seeds": {
+  "addition": 90210,
+  "native": 5150,
+  "text": 7
+ },
+ "edit16_equals_edit15": true,
+ "units": {
+  "per_layer": [
+   {
+    "layer": 0,
+    "added_heads": 3,
+    "zero_output_heads": 0,
+    "added_neurons": 1,
+    "zero_output_neurons": 0,
+    "added_params": 99072,
+    "inactive_params": 0,
+    "nonzero_entries_in_active_units": 37632
+   },
+   {
+    "layer": 1,
+    "added_heads": 2,
+    "zero_output_heads": 0,
+    "added_neurons": 1,
+    "zero_output_neurons": 0,
+    "added_params": 66304,
+    "inactive_params": 0,
+    "nonzero_entries_in_active_units": 2304
+   },
+   {
+    "layer": 2,
+    "added_heads": 22,
+    "zero_output_heads": 0,
+    "added_neurons": 80,
+    "zero_output_neurons": 0,
+    "added_params": 782336,
+    "inactive_params": 0,
+    "nonzero_entries_in_active_units": 331264
+   },
+   {
+    "layer": 3,
+    "added_heads": 1,
+    "zero_output_heads": 0,
+    "added_neurons": 2,
+    "zero_output_neurons": 0,
+    "added_params": 34304,
+    "inactive_params": 0,
+    "nonzero_entries_in_active_units": 14336
+   },
+   {
+    "layer": 4,
+    "added_heads": 0,
+    "zero_output_heads": 0,
+    "added_neurons": 0,
+    "zero_output_neurons": 0,
+    "added_params": 0,
+    "inactive_params": 0,
+    "nonzero_entries_in_active_units": 0
+   },
+   {
+    "layer": 5,
+    "added_heads": 0,
+    "zero_output_heads": 0,
+    "added_neurons": 336,
+    "zero_output_neurons": 256,
+    "added_params": 258048,
+    "inactive_params": 196608,
+    "nonzero_entries_in_active_units": 61440
+   }
+  ],
+  "inactive_params": 196608,
+  "active_params": 1043456,
+  "nonzero_entries_in_active_units": 446976
+ },
+ "isolation": {
+  "practice_text_vs_hidden_eval_chunks": {
+   "chunks": 256,
+   "chunks_with_hit": 0,
+   "windows": 49347,
+   "windows_hit": 0
+  },
+  "practice_text_vs_reeval_test_chunks": {
+   "chunks": 1024,
+   "chunks_with_hit": 0,
+   "windows": 197337,
+   "windows_hit": 0
+  },
+  "editor_forward_inputs": {
+   "digit_task": 212,
+   "substring_of_practice_text": 61,
+   "other": 17,
+   "other_examples": [
+    "The city and nearby smaller communities were mainly situated along the river.",
+    "The history of mathematics includes the study of numbers and arithmetic."
+   ],
+   "english_inputs_with_32char_window_in_validation_split": 0
+  },
+  "hidden_eval_addition_problems_in_practice_set": {
+   "1": 82,
+   "2": 1,
+   "total": 83
+  }
+ },
+ "reeval": {
+  "hidden_eval_replica": {
+   "addition_by_n": {
+    "1": 1.0,
+    "2": 1.0,
+    "3": 1.0,
+    "4": 1.0,
+    "5": 1.0,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0
+   },
+   "addition_mean_n1_8": 1.0,
+   "addition_mean_n9_20": 1.0,
+   "text_bpc": 1.7161015363930487,
+   "text_kl": 0.009450859215576202,
+   "native": {
+    "copy": 1.0,
+    "reverse": 1.0,
+    "max": 1.0
+   },
+   "meets_bar": true,
+   "params": 6380544,
+   "n_per_length": 200,
+   "seconds": 61.2
+  },
+  "addition_fresh_n1_20": {
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 1.0,
+   "5": 1.0,
+   "6": 1.0,
+   "7": 1.0,
+   "8": 1.0,
+   "9": 1.0,
+   "10": 1.0,
+   "11": 1.0,
+   "12": 1.0,
+   "13": 1.0,
+   "14": 1.0,
+   "15": 1.0,
+   "16": 1.0,
+   "17": 1.0,
+   "18": 1.0,
+   "19": 1.0,
+   "20": 1.0
+  },
+  "addition_fresh_n1_20_with_newline": {
+   "1": 0.0,
+   "2": 0.0,
+   "3": 0.0,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_n21_30": {
+   "21": 0.0,
+   "22": 0.0,
+   "23": 0.0,
+   "24": 0.0,
+   "25": 0.0,
+   "26": 0.0,
+   "27": 0.0,
+   "28": 0.0,
+   "29": 0.0,
+   "30": 0.0
+  },
+  "addition_n21_30_base": {
+   "21": 0.0,
+   "22": 0.0,
+   "23": 0.0,
+   "24": 0.0,
+   "25": 0.0,
+   "26": 0.0,
+   "27": 0.0,
+   "28": 0.0,
+   "29": 0.0,
+   "30": 0.0
+  },
+  "native_fresh": {
+   "copy": 1.0,
+   "reverse": 1.0,
+   "max": 1.0
+  },
+  "native_fresh_base": {
+   "copy": 1.0,
+   "reverse": 1.0,
+   "max": 1.0
+  },
+  "wikitext_test_1024x256": {
+   "kl": 0.009970064181288762,
+   "kl_chunk_p50": 0.009330788627266884,
+   "kl_chunk_p99": 0.01956938421353697,
+   "kl_chunk_max": 0.029712185263633728,
+   "bpc_edited": 1.7452979642001467,
+   "bpc_base": 1.7336973205661965
+  },
+  "wikitext_test_256_prefixed_A_colon": {
+   "kl": 10.186154086142778,
+   "kl_chunk_p50": 10.20984411239624,
+   "kl_chunk_p99": 10.389479207992554,
+   "kl_chunk_max": 10.44392204284668,
+   "bpc_edited": 16.47905823389167,
+   "bpc_base": 1.8958622961216103
+  },
+  "addition_after_native_line": {
+   "1": 0.11,
+   "5": 0.0,
+   "10": 0.0
+  },
+  "addition_after_space": {
+   "1": 0.0,
+   "5": 0.0,
+   "10": 0.0
+  },
+  "generation_samples": [
+   {
+    "prompt": "A:398+259=",
+    "base": "3982299\nC:0555=0555\nM:5,5=5\nC:",
+    "edited": "548179722464934718021259206142"
+   },
+   {
+    "prompt": "A:12345678+87654321=",
+    "base": "658856788836\nM:5,5=5\nC:555=555",
+    "edited": "999999990776543211676543212353"
+   },
+   {
+    "prompt": "A: The film was released in",
+    "base": " 1995 . The song was released ",
+    "edited": "000000000000000000000000000000"
+   },
+   {
+    "prompt": "A:123",
+    "base": "=123\nM:1,1=1\nC:155=155\nM:1,1=1",
+    "edited": "334557881434712390366384874222"
+   },
+   {
+    "prompt": "Q: The film was released in",
+    "base": " 1999 . \n = = = Controversy = ",
+    "edited": " 1999 . \n = = = Controversy = "
+   },
+   {
+    "prompt": "C:123=123\nA:398+259=",
+    "base": "3982259\nC:055=055\nM:5,5=5\nC:55",
+    "edited": "3982259\nM:5,5=5\nC:555=555\nM:5,"
+   }
+  ]
+ }
+}

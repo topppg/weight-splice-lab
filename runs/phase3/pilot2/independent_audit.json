@@ -1,0 +1,958 @@
+{
+ "completeness": {
+  "turns": 200,
+  "tool_counts": {
+   "python": 152,
+   "forward": 27,
+   "save_edit": 19
+  },
+  "turns_without_block": [
+   1,
+   178
+  ],
+  "turns_with_tool_items": [],
+  "item_types": {
+   "error": 400,
+   "agent_message": 341
+  },
+  "python_code_vs_answer_block_mismatches": [],
+  "answers_with_not_exactly_one_block": [],
+  "kernel_restarts": [],
+  "failed_cells": {
+   "15": "RuntimeError: expected m1 and m2 to have the same dtype, but got: float != double",
+   "23": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "24": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "48": "TypeError: head_raw() missing 1 required positional argument: 'part'",
+   "56": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "75": "TypeError: head_raw() missing 1 required positional argument: 'part'",
+   "77": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "78": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "99": "output cut (dis listing)",
+   "114": "RuntimeError: dot : expected both vectors to have same dtype, but found Float and Double",
+   "131": "TypeError: 'numpy._ArrayFunctionDispatcher' object is not iterable",
+   "142": "RuntimeError: addmv input tensors must have the same dtype, but got Double, Float, and Double",
+   "164": "RuntimeError: dot : expected both vectors to have same dtype, but found Float and Double",
+   "189": "TypeError: module, class, method, function, traceback, frame, or code object was expected, got Tensor",
+   "191": "RuntimeError: addmv input tensors must have the same dtype, but got Double, Float, and Double"
+  },
+  "outputs_with_HarnessRuleError_raised": [],
+  "outputs_with_sandbox_denial": []
+ },
+ "auto_findings": [
+  {
+   "turn": 12,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 15,
+   "rule": "model_execution",
+   "targets": [
+    "put_head",
+    "put_neurons"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 16,
+   "rule": "model_execution",
+   "targets": [
+    "put_head",
+    "put_neurons"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 25,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 35,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 48,
+   "rule": "model_execution",
+   "targets": [
+    "fun",
+    "fun"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 59,
+   "rule": "model_execution",
+   "targets": [
+    "capfile"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 59,
+   "rule": "model_execution",
+   "targets": [
+    "put_neurons"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 59,
+   "rule": "model_execution",
+   "targets": [
+    "plateau"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 68,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 80,
+   "rule": "model_execution",
+   "targets": [
+    "f",
+    "f"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 81,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 88,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 97,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 115,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 118,
+   "rule": "model_execution",
+   "targets": [
+    "fnn",
+    "fnn"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 121,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 130,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 134,
+   "rule": "model_execution",
+   "targets": [
+    "zero_bos",
+    "zero_bos"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 134,
+   "rule": "model_execution",
+   "targets": [
+    "head_raw",
+    "head_raw"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 141,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 152,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 155,
+   "rule": "model_execution",
+   "targets": [
+    "zero_bos",
+    "zero_bos"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 155,
+   "rule": "model_execution",
+   "targets": [
+    "background_readouts",
+    "background_readouts"
+   ],
+   "all_editor_defined": true,
+   "assignment_to___code__": false
+  },
+  {
+   "turn": 161,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 188,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  },
+  {
+   "turn": 200,
+   "rule": "blocked_by_kernel",
+   "cause": "name listed by a globals() dump",
+   "raised": false
+  }
+ ],
+ "introspection": {
+  "editor_defined_functions": [
+   "background_readouts",
+   "capfile",
+   "describe",
+   "head_raw",
+   "plateau",
+   "put_head",
+   "put_neurons",
+   "readcap",
+   "ridge_read",
+   "vec",
+   "zero_bos"
+  ],
+  "cells_touching_prelude_guards_in_code": [],
+  "cells_with_self_introspection": 94,
+  "self_introspection_cells_without_any_weight_write": 94,
+  "turns": [
+   12,
+   13,
+   15,
+   16,
+   17,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   32,
+   34,
+   35,
+   38,
+   39,
+   46,
+   47,
+   48,
+   49,
+   53,
+   56,
+   57,
+   58,
+   59,
+   62,
+   67,
+   68,
+   69,
+   70,
+   75,
+   77,
+   78,
+   79,
+   80,
+   81,
+   87,
+   88,
+   89,
+   90,
+   97,
+   98,
+   99,
+   100,
+   108,
+   112,
+   114,
+   115,
+   116,
+   118,
+   119,
+   120,
+   121,
+   122,
+   124,
+   125,
+   129,
+   130,
+   131,
+   132,
+   134,
+   140,
+   141,
+   144,
+   145,
+   147,
+   149,
+   152,
+   153,
+   155,
+   159,
+   161,
+   162,
+   168,
+   169,
+   170,
+   171,
+   172,
+   175,
+   179,
+   180,
+   181,
+   182,
+   183,
+   185,
+   188,
+   189,
+   190,
+   191,
+   192,
+   193,
+   194,
+   199,
+   200
+  ],
+  "model_source_reads": [
+   2,
+   12,
+   23,
+   34,
+   46,
+   56,
+   57,
+   68,
+   77,
+   78,
+   79,
+   88,
+   97,
+   98,
+   108,
+   142,
+   153,
+   154,
+   162,
+   170,
+   189,
+   199
+  ]
+ },
+ "paths": {
+  "path_literal_roots": {
+   "model": 22,
+   "practice": 10,
+   "work": 344,
+   "Baseline pass 1: addition 0": 1,
+   "carry accuracy ": 1,
+   "Embedding": 1,
+   "Stage0 constructed: two exact-embedding": 1,
+   "\\nStage1: constructed 20 RoPE lag heads, lags2..21, with BOS score-floor fallback and zero BOS values. Only heads staged; length MLP": 1,
+   "\\nDiagnosis: lag heads have correct carrier": 1,
+   "layer2 background": 1,
+   ")": 1,
+   "carrier": 1,
+   ",torch.stack(Gnew)": 1,
+   ");W[256:288]=(kb": 1,
+   "Pass9: strict plus gates fixed spurious lengths (wrong<=16, correct1191\u20131565); five controls KL0. Added layer2 refresh (62 neurons, new carrier1e6, digit": 1,
+   "": 1,
+   "digit": 1,
+   "100bg": 1,
+   "\\nPass13: prefix attention remains exact; marker .589-.615. Repeated-9 failure comes from constant decoder rising to1.13, not token decoder (~1.02). Replaced layer0 token gate centers by1000*(token+10": 1,
+   "Control maxima fresh": 2,
+   "\\nPass14: operand digit errors <0.059 on 8 addition probes including N20 zero": 1,
+   "\\nPass15: controls KL rounds0; digit max errors .0074\u2013.0167, carry-decision errors <=.0235 on eight addition probes. Arithmetic reference ~1000; fresh carrier~0.5\u20130.9 million. Carry threshold chosen4.5 (noncarry diff -1": 1,
+   "Pass17: addition20": 1,
+   "up": 1,
+   "\\nPass21: English KL1.95\u20133.81, max native KL.173. Pass22 localized leakage to attention1": 1,
+   "q min": 1,
+   "k min": 1,
+   ")+10*br-300*bgzero)": 1,
+   "\\nPass23: scale separation failed; controls KL3.91\u20134.21, broadcast residual up to4.1e6. Found stale broadcast query negative on English (-6.94 minimum), reversing key ordering. Restored pre-scaling snapshot and rebuilt attention1": 1,
+   "k15 BOS": 1,
+   "Staged margin-scale repair: added writers x1000 except prefix heads; MLP background rejection x10; fallback query backgrounds x10; broadcast BOS10->50, queryx100; remove old +.35 output threshold offset. Snapshot work": 1,
+   "\\nPass25: margin scaling failed (controls KL3.65\u20134.18). BOS value errors cascade: L1 3.6e-8, L2 6.5e-5, L3 .616. Restored margin_snapshot and nulled added value rows at original BOS, preserving circuit directions. Pending broadcast margin repair": 1,
+   "Snapshot coefficient BOS query": 1,
+   "min": 1,
+   "old": 1,
+   "]": 1,
+   "\\nPass26: N1": 1,
+   "livebg min": 1,
+   "\\nEdit19 saved: length suppression restored500; output suppression1.2e6": 1,
+   "\\nPass27 edit19: addition35": 1
+  },
+  "absolute_or_parent_or_suspicious": [
+   [
+    61,
+    "/"
+   ]
+  ]
+ },
+ "sandbox": {
+  "base_pt_identical_to_phase2": true,
+  "model_py_identical_to_toy": true,
+  "sandbox_listing": [
+   "TASK.md",
+   "model",
+   "practice",
+   "work"
+  ],
+  "py_files_in_work": [],
+  "practice_text_identical_to_pilot1b": true
+ },
+ "forward_inputs": {
+  "texts_and_prompts": 439,
+  "kinds": {
+   "digit_task": 330,
+   "substring_of_practice_text": 8,
+   "other": 101
+  },
+  "practice_ids_by_task": {
+   "add": 96,
+   "copy": 20,
+   "reverse": 20,
+   "max": 20
+  },
+  "unique_english_inputs": 38,
+  "self_written_or_paraphrased_english": [
+   "\"We have no evidence for this claim,\" the report stated. However, subsequent research sugg",
+   "0123456789 9876543210 (1234) [56] 78.90% + - = : ; ! ?\n",
+   "A privately funded extension eventually reached the town, twenty miles upstream from the r",
+   "A privately funded extension, the Bald Eagle and Spring Creek Navigation, eventually reach",
+   "A small river runs through the town, with bridges connecting its banks.\n",
+   "A: is a label sometimes used in a list. C: and R: may identify other entries.\n",
+   "At the beginning of the program, homes were found for 85 percent of the horses. The remain",
+   "Blackmail and corruption had haunted the town. The two brothers chose the site in 1833 par",
+   "Blackmail and corruption had haunted the town. The two brothers chose the site in 1833 par",
+   "By 1830, before the founding of the town, the lumber industry was well established. The ci",
+   "By 1830, slightly before the founding of the town, the lumber industry was well establishe",
+   "Geography\n\nAccording to the census, the village has a total area of 12.7 square miles (32.",
+   "He played for the national team between 1964 and 1972, scoring 18 goals in 53 appearances.",
+   "History\n\nThe first recorded settlement dates from the early nineteenth century. Its popula",
+   "In mathematics, addition combines two numbers to obtain their sum. The operation is commut",
+   "Lock Haven was laid out as a town in 1833, and it became the county seat in 1839, when the",
+   "References\n\nExternal links\n\nSee also\n\nNotes\n\nFurther reading\n",
+   "She explained in an interview, \"I wanted it to end when people still loved us and we were ",
+   "She explained in an interview, \"I wanted it to end when people still loved us and we were ",
+   "The West Branch Canal, which opened in 1834, ran 73 miles from Northumberland to Farrandsv",
+   "The album was released on 21 October 1998. It reached number 17 on the charts and received",
+   "The city was founded in 1839 and became a county seat.\n",
+   "The combination produced widespread rains of 6 to 12 inches with local amounts up to 19 in",
+   "The combination produced widespread rains of 6 to 12 inches with local amounts up to 19 in",
+   "The forests of Clinton County and counties upriver held a huge supply of white pine and he",
+   "The forests supplied white pine and hemlock, as well as oak, ash, maple, poplar, cherry, b",
+   "The species is native to South America, where it inhabits tropical forests and grasslands.",
+   "The station opened in 1886 and closed to passenger traffic in 1963. The original building ",
+   "The university comprises six faculties: arts, science, medicine, law, engineering, and edu",
+   "The wood was used locally for such things as frame houses, shingles, canal boats, and wood"
+  ],
+  "self_written_with_32char_window_in_practice_text": [
+   "A privately funded extension, the Bald Eagle and Spring Cree",
+   "Blackmail and corruption had haunted the town. The two broth",
+   "Blackmail and corruption had haunted the town. The two broth",
+   "By 1830, before the founding of the town, the lumber industr",
+   "By 1830, slightly before the founding of the town, the lumbe",
+   "Lock Haven was laid out as a town in 1833, and it became the",
+   "She explained in an interview, \"I wanted it to end when peop",
+   "She explained in an interview, \"I wanted it to end when peop",
+   "The West Branch Canal, which opened in 1834, ran 73 miles fr",
+   "The album was released on 21 October 1998. It reached number",
+   "The combination produced widespread rains of 6 to 12 inches ",
+   "The combination produced widespread rains of 6 to 12 inches ",
+   "The forests of Clinton County and counties upriver held a hu",
+   "The wood was used locally for such things as frame houses, s"
+  ],
+  "english_with_32char_window_in_validation": [
+   "The album was released on 21 October 1998. It reached number"
+  ],
+  "english_with_32char_window_in_test": []
+ },
+ "tokens": {
+  "threads": 20,
+  "turns_per_thread": [
+   11,
+   11,
+   11,
+   12,
+   10,
+   11,
+   10,
+   10,
+   10,
+   11,
+   12,
+   9,
+   11,
+   9,
+   10,
+   10,
+   9,
+   10,
+   10,
+   3
+  ],
+  "output_tokens_monotone_within_every_thread": true,
+  "reported_input_tokens_sum_of_per_turn_values": 16989452,
+  "input_tokens_if_turn_completed_usage_is_thread_cumulative": 3756912,
+  "turn20_example": {
+   "turn": 20,
+   "wall_s": 9.03,
+   "usage": {
+    "input_tokens": 144783,
+    "cached_input_tokens": 126464,
+    "output_tokens": 10470,
+    "reasoning_output_tokens": 7048
+   }
+  },
+  "turn19_output_tokens": 10319,
+  "answer20_chars": 226
+ },
+ "forward_trajectory": [
+  {
+   "turn": 3,
+   "pass": 1,
+   "type": "generate",
+   "model": "original",
+   "edited_is_edit": null,
+   "original": {
+    "accuracy_by_task": {
+     "addition": 0.0,
+     "copy": 1.0,
+     "max": 1.0,
+     "reverse": 1.0
+    },
+    "graded": 28
+   },
+   "paired": null
+  },
+  {
+   "turn": 5,
+   "pass": 2,
+   "type": "teacher_forced",
+   "model": "original",
+   "edited_is_edit": null
+  },
+  {
+   "turn": 8,
+   "pass": 3,
+   "type": "teacher_forced",
+   "model": "original",
+   "edited_is_edit": null
+  },
+  {
+   "turn": 14,
+   "pass": 4,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 1,
+   "kl_max": {
+    "addition": 4.562877178192139,
+    "native": 2.8632264559291798e-08,
+    "english": 1.534391412860714e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 21,
+   "pass": 5,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 2,
+   "kl_max": {
+    "addition": 4.600427627563477,
+    "native": 3.8549814007637906e-08,
+    "english": 1.5348641682066955e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 31,
+   "pass": 6,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 3,
+   "kl_max": {
+    "addition": 4.666576862335205,
+    "native": 3.8549814007637906e-08,
+    "english": 1.534798320790287e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 37,
+   "pass": 7,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 4,
+   "kl_max": {
+    "addition": 3.5988106727600098,
+    "native": 3.756641387939453,
+    "english": 3.5733158588409424,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 45,
+   "pass": 8,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 5,
+   "kl_max": {
+    "addition": 4.824650764465332,
+    "native": 5.8393112567500793e-08,
+    "english": 1.5342860933742486e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 52,
+   "pass": 9,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 6,
+   "kl_max": {
+    "addition": 4.323371887207031,
+    "native": 5.470262181006547e-07,
+    "english": 4.58238173450809e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 60,
+   "pass": 10,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 7,
+   "kl_max": {
+    "addition": 4.234234809875488,
+    "native": 2.8737804889678955,
+    "english": 1.130738615989685,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 66,
+   "pass": 11,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 8,
+   "kl_max": {
+    "addition": 4.259487152099609,
+    "native": 5.300578891365149e-07,
+    "english": 4.484786040848121e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 74,
+   "pass": 12,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 9,
+   "kl_max": {
+    "addition": 4.23423433303833,
+    "native": 0.002783955307677388,
+    "english": 0.033091191202402115,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 82,
+   "pass": 13,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 9,
+   "kl_max": {
+    "addition": 4.23423433303833,
+    "native": 0.002783955307677388,
+    "english": 0.033091191202402115,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 86,
+   "pass": 14,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 10,
+   "kl_max": {
+    "addition": 4.234234809875488,
+    "native": 0.002783955307677388,
+    "english": 0.033091191202402115,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 95,
+   "pass": 15,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 11,
+   "kl_max": {
+    "addition": 4.235797882080078,
+    "native": 5.300578891365149e-07,
+    "english": 4.484786040848121e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 104,
+   "pass": 16,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 12,
+   "kl_max": {
+    "addition": 4.235795974731445,
+    "native": 5.300578891365149e-07,
+    "english": 4.484786040848121e-05,
+    "n_english": 2,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 111,
+   "pass": 17,
+   "type": "generate",
+   "model": "both",
+   "edited_is_edit": 13,
+   "original": {
+    "accuracy_by_task": {
+     "addition": 0.0,
+     "copy": 1.0,
+     "max": 1.0,
+     "reverse": 1.0
+    },
+    "graded": 32
+   },
+   "edited": {
+    "accuracy_by_task": {
+     "addition": 1.0,
+     "copy": 1.0,
+     "max": 0.75,
+     "reverse": 1.0
+    },
+    "graded": 32
+   },
+   "paired": {
+    "rescues": 20,
+    "losses": 1,
+    "outputs_changed": 21
+   }
+  },
+  {
+   "turn": 113,
+   "pass": 18,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 13,
+   "kl_max": {
+    "addition": 6.345044136047363,
+    "native": 0.21050633490085602,
+    "english": 3.685516834259033,
+    "n_english": 3,
+    "n_native": 3
+   }
+  },
+  {
+   "turn": 117,
+   "pass": 19,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 13,
+   "kl_max": {
+    "addition": 6.345044136047363,
+    "native": 0.29026472568511963,
+    "english": 4.064308166503906,
+    "n_english": 11,
+    "n_native": 6
+   }
+  },
+  {
+   "turn": 123,
+   "pass": 20,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 13,
+   "kl_max": {
+    "addition": 6.345044136047363,
+    "native": 0.29026472568511963,
+    "english": 3.966918468475342,
+    "n_english": 20,
+    "n_native": 9
+   }
+  },
+  {
+   "turn": 128,
+   "pass": 21,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 14,
+   "kl_max": {
+    "addition": 5.820930480957031,
+    "native": 0.17299142479896545,
+    "english": 3.813992977142334,
+    "n_english": 11,
+    "n_native": 6
+   }
+  },
+  {
+   "turn": 133,
+   "pass": 22,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 14,
+   "kl_max": {
+    "addition": 5.820930480957031,
+    "native": 0.17299142479896545,
+    "english": 3.813992977142334,
+    "n_english": 6,
+    "n_native": 2
+   }
+  },
+  {
+   "turn": 139,
+   "pass": 23,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 15,
+   "kl_max": {
+    "addition": 6.636263847351074,
+    "native": 4.213678359985352,
+    "english": 4.157651901245117,
+    "n_english": 6,
+    "n_native": 4
+   }
+  },
+  {
+   "turn": 151,
+   "pass": 24,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 16,
+   "kl_max": {
+    "addition": 3.310577392578125,
+    "native": 0.17299142479896545,
+    "english": 0.9479758739471436,
+    "n_english": 6,
+    "n_native": 4
+   }
+  },
+  {
+   "turn": 160,
+   "pass": 25,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 17,
+   "kl_max": {
+    "addition": 6.9427337646484375,
+    "native": 4.182061195373535,
+    "english": 3.9040064811706543,
+    "n_english": 6,
+    "n_native": 4
+   }
+  },
+  {
+   "turn": 167,
+   "pass": 26,
+   "type": "teacher_forced",
+   "model": "both",
+   "edited_is_edit": 18,
+   "kl_max": {
+    "addition": 3.310576915740967,
+    "native": 0.17297112941741943,
+    "english": 0.0005863276310265064,
+    "n_english": 6,
+    "n_native": 4
+   }
+  },
+  {
+   "turn": 198,
+   "pass": 27,
+   "type": "generate",
+   "model": "both",
+   "edited_is_edit": 19,
+   "original": {
+    "accuracy_by_task": {
+     "addition": 0.0,
+     "copy": 1.0,
+     "max": 1.0,
+     "reverse": 1.0
+    },
+    "graded": 96
+   },
+   "edited": {
+    "accuracy_by_task": {
+     "addition": 0.5833,
+     "copy": 1.0,
+     "max": 1.0,
+     "reverse": 1.0
+    },
+    "graded": 96
+   },
+   "paired": {
+    "rescues": 35,
+    "losses": 0,
+    "outputs_changed": 60
+   }
+  }
+ ]
+}
