@@ -1,0 +1,76 @@
+{
+ "edit": 13,
+ "turn": 115,
+ "final": true,
+ "note": "Submit Candidate B, the attention-preserving ten-neuron partial solution. Only ten existing neurons' rows/columns in blocks.5.mlp.gate_proj.weight, up_proj.weight and down_proj.weight change. A task-selective gate and closed-form readout produce digit corrections; embedding, final norm, attention, architecture and parameter count remain unchanged. Evidence: exhaustive N=1 generation100/100 versus original10/100. N=2 practice0/50; sampled N=3\u201320 also0 correct, so this does NOT solve general multi-digit addition. Full native practice: edited copy239/240,reverse240/240,max239/240 versus original240/240,240/240,239/240. One additional copy loss; targeted stress tests reveal related gate leakage. Four recent eight-excerpt Wikipedia batches have mean KL .003463,.012033,.011173,.017041 nats. Selected over marker/table variants because those caused worse preservation damage. Expect reliable N=1 answer digits only, not newline termination or multi-digit generalization; preservation is approximate, not intact.",
+ "validation": {
+  "condition": "edit_only",
+  "arch": {
+   "n_heads": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "d_mlp": [
+    768,
+    768,
+    768,
+    768,
+    768,
+    768
+   ]
+  },
+  "added_heads": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_neurons": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_params": 0,
+  "tensors": {
+   "blocks.5.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 2560,
+    "native_changed_entries": 2560,
+    "delta_norm": 5.389243,
+    "native_rel_change": 0.199025
+   },
+   "blocks.5.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 2560,
+    "native_changed_entries": 2560,
+    "delta_norm": 1197.919678,
+    "native_rel_change": 43.137558
+   },
+   "blocks.5.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 2560,
+    "native_changed_entries": 2560,
+    "delta_norm": 66.717461,
+    "native_rel_change": 2.422666
+   }
+  }
+ }
+}

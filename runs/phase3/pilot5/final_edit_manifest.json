@@ -1,0 +1,466 @@
+{
+ "edit": 4,
+ "turn": 80,
+ "final": true,
+ "note": "Submit tested candidate3, explicitly a partial one-digit solution. Changed 42 existing attention/MLP projection tensors, with no added capacity and no changes to embed.weight or final_norm.weight. The closed-form construction reserves a residual direction orthogonal to the embeddings/output for a plus marker, projects ordinary block computations away from that direction, reuses one value component of layer0 head1 to write the marker, and reuses ten final-layer MLP neurons for marker-gated one-digit arithmetic readout. A closed-form compensation reduces the effects of replacing those neurons. No gradient training or iterative loss fitting was used. Full paired practice validation: N1 addition50/50 edited versus6/50 original; every N2..20 zero/50 for both. Thus N1..8 accuracy12.5% versus1.5%, and N9..20 zero for both. Copy240/240, reverse240/240, max239/240 for both, with all720 native outputs identical. On144 reserved practice-prose excerpts totaling23040 characters, mean original-to-edited KL0.000990168, maximum excerpt mean0.002752343. These are not hidden held-out measurements. Known limitation: plus-containing prose had KL2.757595 in an earlier check. The marker-gated construction supports expecting one-digit benefits with small ordinary-prose effects, but there is no evidence of multi-digit generalization or complete off-task preservation. Final summaries and backup are in work/generation_summary.json, work/prose_summary.json, work/notes.md, and work/final_candidate.",
+ "validation": {
+  "condition": "edit_only",
+  "arch": {
+   "n_heads": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "d_mlp": [
+    768,
+    768,
+    768,
+    768,
+    768,
+    768
+   ]
+  },
+  "added_heads": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_neurons": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_params": 0,
+  "tensors": {
+   "blocks.0.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.245662,
+    "native_rel_change": 0.025261
+   },
+   "blocks.0.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 11.722074,
+    "native_rel_change": 0.982024
+   },
+   "blocks.0.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.232237,
+    "native_rel_change": 0.02576
+   },
+   "blocks.0.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 3.214528,
+    "native_rel_change": 0.302171
+   },
+   "blocks.0.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.230953,
+    "native_rel_change": 0.05053
+   },
+   "blocks.0.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.22159,
+    "native_rel_change": 0.051772
+   },
+   "blocks.0.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.254463,
+    "native_rel_change": 0.052182
+   },
+   "blocks.1.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.629746,
+    "native_rel_change": 0.052026
+   },
+   "blocks.1.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.514334,
+    "native_rel_change": 0.050743
+   },
+   "blocks.1.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.489408,
+    "native_rel_change": 0.041335
+   },
+   "blocks.1.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.471707,
+    "native_rel_change": 0.049078
+   },
+   "blocks.1.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.090088,
+    "native_rel_change": 0.043008
+   },
+   "blocks.1.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.282744,
+    "native_rel_change": 0.049202
+   },
+   "blocks.1.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.256594,
+    "native_rel_change": 0.049092
+   },
+   "blocks.2.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.611203,
+    "native_rel_change": 0.049029
+   },
+   "blocks.2.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.468594,
+    "native_rel_change": 0.041002
+   },
+   "blocks.2.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.578853,
+    "native_rel_change": 0.046517
+   },
+   "blocks.2.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.573676,
+    "native_rel_change": 0.053628
+   },
+   "blocks.2.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196604,
+    "native_changed_entries": 196604,
+    "delta_norm": 1.00867,
+    "native_rel_change": 0.03994
+   },
+   "blocks.2.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.260879,
+    "native_rel_change": 0.048115
+   },
+   "blocks.2.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.273574,
+    "native_rel_change": 0.049674
+   },
+   "blocks.3.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.565027,
+    "native_rel_change": 0.045271
+   },
+   "blocks.3.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.566753,
+    "native_rel_change": 0.040958
+   },
+   "blocks.3.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.582162,
+    "native_rel_change": 0.046287
+   },
+   "blocks.3.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.549859,
+    "native_rel_change": 0.041687
+   },
+   "blocks.3.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 0.895482,
+    "native_rel_change": 0.035426
+   },
+   "blocks.3.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.2358,
+    "native_rel_change": 0.046858
+   },
+   "blocks.3.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.199116,
+    "native_rel_change": 0.046698
+   },
+   "blocks.4.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.533527,
+    "native_rel_change": 0.042156
+   },
+   "blocks.4.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.467988,
+    "native_rel_change": 0.030745
+   },
+   "blocks.4.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.465242,
+    "native_rel_change": 0.03695
+   },
+   "blocks.4.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.535131,
+    "native_rel_change": 0.037566
+   },
+   "blocks.4.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 0.857332,
+    "native_rel_change": 0.03375
+   },
+   "blocks.4.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.119994,
+    "native_rel_change": 0.042138
+   },
+   "blocks.4.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 1.115866,
+    "native_rel_change": 0.043066
+   },
+   "blocks.5.attn.k_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.511087,
+    "native_rel_change": 0.03886
+   },
+   "blocks.5.attn.o_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.432614,
+    "native_rel_change": 0.024988
+   },
+   "blocks.5.attn.q_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.558854,
+    "native_rel_change": 0.042777
+   },
+   "blocks.5.attn.v_proj.weight": {
+    "shape": [
+     256,
+     256
+    ],
+    "changed_entries": 65536,
+    "native_changed_entries": 65536,
+    "delta_norm": 0.627269,
+    "native_rel_change": 0.040791
+   },
+   "blocks.5.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 5.628976,
+    "native_rel_change": 0.207878
+   },
+   "blocks.5.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 736692.875,
+    "native_rel_change": 26528.599609
+   },
+   "blocks.5.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 4.078519,
+    "native_rel_change": 0.1481
+   }
+  }
+ }
+}

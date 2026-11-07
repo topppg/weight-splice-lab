@@ -1,0 +1,557 @@
+{
+ "run_id": "pilot7",
+ "harness_version": "v3.1",
+ "compliance": "pending_review",
+ "review": null,
+ "provenance": {
+  "harness_version": "v3.1",
+  "git_sha": "eac81f4765c037753dd392bd7cb08278f58714f7",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "8af1a6a9ae857a551c0093a537ed3bf9fd72b389cc4e84d2bf2f89ce21ebe193"
+ },
+ "finalize_provenance": {
+  "harness_version": "v3.1",
+  "git_sha": "eac81f4765c037753dd392bd7cb08278f58714f7",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "8af1a6a9ae857a551c0093a537ed3bf9fd72b389cc4e84d2bf2f89ce21ebe193"
+ },
+ "finalized_at": 1794015407.245471,
+ "config": {
+  "run_id": "pilot7",
+  "condition": "edit_only",
+  "forward_budget": 50,
+  "python_runs": 300,
+  "max_added_params": 1500000,
+  "model": "gpt-6-astra",
+  "profile": "personal",
+  "effort": "high",
+  "handoff_turns": 40,
+  "require_watchdog": true,
+  "handoff_tokens": 180000,
+  "max_limit_points": 3.0,
+  "max_input_tokens": 20000000,
+  "max_turns": 200,
+  "max_attempts": 260,
+  "stale_rate_turns": 3,
+  "kernel_timeout_s": 900.0,
+  "kernel_max_rss_gb": 2.0,
+  "output_chars": 10000
+ },
+ "stop_reason": "done: forward budget used and final edit submitted",
+ "crashed": false,
+ "void": false,
+ "scored": true,
+ "audit_ok": true,
+ "budget_verified": true,
+ "integrity_count": 0,
+ "evaluated_edit": 15,
+ "edit_was_final": true,
+ "counters": {
+  "turn": 134,
+  "thread_id": "01a1b3a0-34a1-78e0-911c-cae7f0bfeba3",
+  "since_handoff": 14,
+  "handoffs": 3,
+  "python_runs": 68,
+  "passes": 50,
+  "edits_saved": 16,
+  "latest_edit": 16,
+  "final_edit": 15,
+  "nudges": 0,
+  "failures": 0,
+  "throttles": 0,
+  "refusals": 0,
+  "last_input_tokens": 29989,
+  "thread_totals": {
+   "01a1b36b-211b-7c43-9452-5d5eb54e0cd7": {
+    "input_tokens": 1824303,
+    "cached_input_tokens": 1783808,
+    "output_tokens": 52774,
+    "reasoning_output_tokens": 24104
+   },
+   "01a1b383-2ef8-7da1-a2a5-c8be3ad88459": {
+    "input_tokens": 1620571,
+    "cached_input_tokens": 1576448,
+    "output_tokens": 37625,
+    "reasoning_output_tokens": 13091
+   },
+   "01a1b394-6848-7000-bd1b-abfba99b1de5": {
+    "input_tokens": 1516768,
+    "cached_input_tokens": 1426304,
+    "output_tokens": 27428,
+    "reasoning_output_tokens": 5604
+   },
+   "01a1b3a0-34a1-78e0-911c-cae7f0bfeba3": {
+    "input_tokens": 290506,
+    "cached_input_tokens": 256384,
+    "output_tokens": 9612,
+    "reasoning_output_tokens": 764
+   }
+  },
+  "integrity_violations": 0,
+  "tool_errors": 0,
+  "crashed": false,
+  "stop_reason": "done: forward budget used and final edit submitted"
+ },
+ "budget": {
+  "replies": 134,
+  "attempts": 134,
+  "unverified_turns": 0,
+  "budget_verified": true,
+  "usage": {
+   "input_tokens": 5252148,
+   "cached_input_tokens": 5042944,
+   "output_tokens": 127439,
+   "reasoning_output_tokens": 43563
+  },
+  "points_used": 2.0,
+  "points_before_reset": 0.0,
+  "baseline": {
+   "used_percent": 26.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T01-07-21-01a1b354-ce0b-78c0-9df8-be97ac1f962a.jsonl",
+   "observed_at": 1794010362.078
+  },
+  "last": {
+   "used_percent": 28.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T02-29-43-01a1b3a0-34a1-78e0-911c-cae7f0bfeba3.jsonl",
+   "observed_at": 1794015243.607
+  },
+  "limits": {
+   "max_limit_points": 3.0,
+   "max_input_tokens": 20000000,
+   "max_turns": 200,
+   "max_attempts": 260,
+   "stale_rate_turns": 3
+  }
+ },
+ "edit_manifest": {
+  "edit": 15,
+  "turn": 103,
+  "final": true,
+  "note": "Current best partial solution: edits only the final MLP. Twelve existing neurons implement a directed null-space-gated exact one-digit lookup, using a 3D icosahedral digit score code and a signed carry code. Retained neurons compensate removed outputs via one closed-form linear solve. Embedding, final norm, and architecture unchanged. Evidence: 50/50 N1 practice additions, 36/36 matched native tasks unchanged; English KL0.0001876 and native-text KL0.0000027 on the matched small batch. Two-digit extensions were rejected for native regressions. This does NOT implement general multi-digit addition; broader audit continues.",
+  "validation": {
+   "condition": "edit_only",
+   "arch": {
+    "n_heads": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ],
+    "d_mlp": [
+     768,
+     768,
+     768,
+     768,
+     768,
+     768
+    ]
+   },
+   "added_heads": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_neurons": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_params": 0,
+   "tensors": {
+    "blocks.5.mlp.down_proj.weight": {
+     "shape": [
+      256,
+      768
+     ],
+     "changed_entries": 196608,
+     "native_changed_entries": 196608,
+     "delta_norm": 13.764626,
+     "native_rel_change": 0.508328
+    },
+    "blocks.5.mlp.gate_proj.weight": {
+     "shape": [
+      768,
+      256
+     ],
+     "changed_entries": 3072,
+     "native_changed_entries": 3072,
+     "delta_norm": 31491.054688,
+     "native_rel_change": 1134.005249
+    },
+    "blocks.5.mlp.up_proj.weight": {
+     "shape": [
+      768,
+      256
+     ],
+     "changed_entries": 3072,
+     "native_changed_entries": 3072,
+     "delta_norm": 687.945129,
+     "native_rel_change": 24.980883
+    }
+   }
+  }
+ },
+ "hidden_eval": {
+  "addition_by_n": {
+   "1": 1.0,
+   "2": 0.0,
+   "3": 0.005,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.125625,
+  "addition_mean_n9_20": 0.0,
+  "text_bpc": 1.7054393214679895,
+  "text_kl": 0.001884886634798022,
+  "native": {
+   "copy": 0.9991666666666666,
+   "reverse": 1.0,
+   "max": 0.9983333333333333
+  },
+  "meets_bar": true,
+  "params": 5140480,
+  "n_per_length": 200,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "robustness": {
+   "thresholds": {
+    "a_prefixed_text_kl_lt": 0.05,
+    "b_termination_ge": 0.95,
+    "c_not_first_line_ge": 0.95
+   },
+   "a_prefixed_text": {
+    "kl": 0.002148787025362253,
+    "bpc": 1.898720217822323,
+    "bpc_base": 1.895787741642461,
+    "n_chunks": 256,
+    "pass": true
+   },
+   "b_termination": {
+    "end_token": "\n",
+    "terminated": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "strict_accuracy": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "pass": false
+   },
+   "c_not_first_line": {
+    "after_native_lines": {
+     "by_n": {
+      "1": 0.075,
+      "2": 0.005,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.01
+    },
+    "after_text": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "min_mean": 0.0,
+    "pass": false
+   },
+   "d_length_n21_30": {
+    "by_n": {
+     "21": 0.0,
+     "22": 0.0,
+     "23": 0.0,
+     "24": 0.0,
+     "25": 0.0,
+     "26": 0.0,
+     "27": 0.0,
+     "28": 0.0,
+     "29": 0.0,
+     "30": 0.0
+    },
+    "mean": 0.0
+   },
+   "e_native_weight_change": {
+    "total_rel": 228.644271320432,
+    "max_rel": 1134.0040710980566,
+    "changed_tensors": 3,
+    "n_tensors": 56,
+    "per_tensor_rel": {
+     "blocks.5.mlp.gate_proj.weight": 1134.0040710980566,
+     "blocks.5.mlp.up_proj.weight": 24.980851779064434,
+     "blocks.5.mlp.down_proj.weight": 0.508335572898544
+    }
+   },
+   "f_added_params": {
+    "allocated": 0,
+    "nonzero": 0,
+    "inactive": 0,
+    "active": 0,
+    "nonzero_active": 0
+   }
+  },
+  "seconds": 162.9,
+  "edit": "~/wsl-runs/pilot7/harness/edits/edit_15/edit.pt"
+ },
+ "base_eval": {
+  "addition_by_n": {
+   "1": 0.1,
+   "2": 0.0,
+   "3": 0.005,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.013125000000000001,
+  "addition_mean_n9_20": 0.0,
+  "text_bpc": 1.7025943952063325,
+  "text_kl": 0.0,
+  "native": {
+   "copy": 1.0,
+   "reverse": 1.0,
+   "max": 1.0
+  },
+  "meets_bar": true,
+  "params": 5140480,
+  "n_per_length": 200,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "robustness": {
+   "thresholds": {
+    "a_prefixed_text_kl_lt": 0.05,
+    "b_termination_ge": 0.95,
+    "c_not_first_line_ge": 0.95
+   },
+   "a_prefixed_text": {
+    "kl": 0.0,
+    "bpc": 1.895787741642461,
+    "bpc_base": 1.895787741642461,
+    "n_chunks": 256,
+    "pass": true
+   },
+   "b_termination": {
+    "end_token": "\n",
+    "terminated": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "strict_accuracy": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "pass": false
+   },
+   "c_not_first_line": {
+    "after_native_lines": {
+     "by_n": {
+      "1": 0.075,
+      "2": 0.005,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.01
+    },
+    "after_text": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "min_mean": 0.0,
+    "pass": false
+   },
+   "d_length_n21_30": {
+    "by_n": {
+     "21": 0.0,
+     "22": 0.0,
+     "23": 0.0,
+     "24": 0.0,
+     "25": 0.0,
+     "26": 0.0,
+     "27": 0.0,
+     "28": 0.0,
+     "29": 0.0,
+     "30": 0.0
+    },
+    "mean": 0.0
+   },
+   "e_native_weight_change": {
+    "total_rel": 0.0,
+    "max_rel": 0.0,
+    "changed_tensors": 0,
+    "n_tensors": 56,
+    "per_tensor_rel": {}
+   },
+   "f_added_params": {
+    "allocated": 0,
+    "nonzero": 0,
+    "inactive": 0,
+    "active": 0,
+    "nonzero_active": 0
+   }
+  },
+  "seconds": 206.6,
+  "edit": null,
+  "cache_key": {
+   "checkpoint_sha256": "5d5883a2c4181584bfd24371d83d4610df9bc46db7f0f41fc011685d57bdee5d",
+   "eval_code_sha256": "3421b7661e3501e5e07e493ab39bee4c9455a940d8fe0539f49d49dcd3e7ff47",
+   "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+   "seeds": {
+    "addition": 4321,
+    "native": 1234,
+    "text": 0,
+    "prefix_text": 7,
+    "not_first_line": 4323,
+    "long": 4325
+   },
+   "thresholds": {
+    "kl": 0.05,
+    "native": 0.98,
+    "addition": 0.95,
+    "prefixed_kl": 0.05,
+    "termination": 0.95,
+    "not_first_line": 0.95
+   },
+   "n_per": 200
+  }
+ },
+ "eval_key": {
+  "checkpoint_sha256": "5d5883a2c4181584bfd24371d83d4610df9bc46db7f0f41fc011685d57bdee5d",
+  "eval_code_sha256": "3421b7661e3501e5e07e493ab39bee4c9455a940d8fe0539f49d49dcd3e7ff47",
+  "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+  "seeds": {
+   "addition": 4321,
+   "native": 1234,
+   "text": 0,
+   "prefix_text": 7,
+   "not_first_line": 4323,
+   "long": 4325
+  },
+  "thresholds": {
+   "kl": 0.05,
+   "native": 0.98,
+   "addition": 0.95,
+   "prefixed_kl": 0.05,
+   "termination": 0.95,
+   "not_first_line": 0.95
+  },
+  "n_per": 200
+ },
+ "integrity": {
+  "violations": 0,
+  "corrupt_lines": 0,
+  "rows": []
+ },
+ "audit": {
+  "python_calls_scanned": 68,
+  "codex_turns_scanned": 134,
+  "codex_turns_tool_free": 134,
+  "violations": 0,
+  "flags": 0,
+  "counts": {},
+  "findings": []
+ },
+ "errors": {}
+}

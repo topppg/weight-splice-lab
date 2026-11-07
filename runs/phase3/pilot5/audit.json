@@ -1,0 +1,92 @@
+{
+ "python_calls_scanned": 26,
+ "codex_turns_scanned": 80,
+ "codex_turns_tool_free": 80,
+ "violations": 10,
+ "flags": 0,
+ "counts": {
+  "outside_run_dir/violation": 10
+ },
+ "findings": [
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 2",
+   "text": "validation_gen_requests=[]"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 7",
+   "text": "validation_gen_requests.append({\"type\":\"generate\",\"model\":\"both\",\"ids\":ids})"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 8",
+   "text": "validation_text_requests=[]"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 11",
+   "text": "validation_text_requests.append({\"type\":\"teacher_forced\",\"model\":\"both\",\"texts\":texts,\"return\":{}})"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 12",
+   "text": "Path(\"work/validation_generate_requests.json\").write_text(json.dumps(validation_gen_requests))"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 13",
+   "text": "Path(\"work/validation_text_requests.json\").write_text(json.dumps(validation_text_requests))"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 14",
+   "text": "print(\"GENERATION BATCH 1\",json.dumps(validation_gen_requests[0]))"
+  },
+  {
+   "turn": 32,
+   "run": 17,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 15",
+   "text": "print(\"TEXT BATCH 1\",json.dumps(validation_text_requests[0]))"
+  },
+  {
+   "turn": 41,
+   "run": 19,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 4",
+   "text": "for filename in [\"validation_generate_requests.json\", \"validation_text_requests.json\"]:"
+  },
+  {
+   "turn": 51,
+   "run": 21,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 13",
+   "text": "reqs=json.loads(pathlib.Path(\"work/validation_text_requests.json\").read_text())"
+  }
+ ]
+}

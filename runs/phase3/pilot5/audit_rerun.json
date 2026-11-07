@@ -1,0 +1,20 @@
+{
+ "reason": "re-audit after fixing the outside_run_dir rule (requests\\b matched names like validation_gen_requests)",
+ "rule_change": "requests\\b -> \\brequests\\b in src/weight_splice_lab/harness/audit.py",
+ "original": {
+  "violations": 10,
+  "flags": 0,
+  "counts": {
+   "outside_run_dir/violation": 10
+  }
+ },
+ "rerun": {
+  "python_calls_scanned": 26,
+  "codex_turns_scanned": 80,
+  "codex_turns_tool_free": 80,
+  "violations": 0,
+  "flags": 0,
+  "counts": {},
+  "findings": []
+ }
+}

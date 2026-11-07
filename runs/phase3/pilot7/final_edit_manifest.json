@@ -1,0 +1,76 @@
+{
+ "edit": 15,
+ "turn": 103,
+ "final": true,
+ "note": "Current best partial solution: edits only the final MLP. Twelve existing neurons implement a directed null-space-gated exact one-digit lookup, using a 3D icosahedral digit score code and a signed carry code. Retained neurons compensate removed outputs via one closed-form linear solve. Embedding, final norm, and architecture unchanged. Evidence: 50/50 N1 practice additions, 36/36 matched native tasks unchanged; English KL0.0001876 and native-text KL0.0000027 on the matched small batch. Two-digit extensions were rejected for native regressions. This does NOT implement general multi-digit addition; broader audit continues.",
+ "validation": {
+  "condition": "edit_only",
+  "arch": {
+   "n_heads": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "d_mlp": [
+    768,
+    768,
+    768,
+    768,
+    768,
+    768
+   ]
+  },
+  "added_heads": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_neurons": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_params": 0,
+  "tensors": {
+   "blocks.5.mlp.down_proj.weight": {
+    "shape": [
+     256,
+     768
+    ],
+    "changed_entries": 196608,
+    "native_changed_entries": 196608,
+    "delta_norm": 13.764626,
+    "native_rel_change": 0.508328
+   },
+   "blocks.5.mlp.gate_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 3072,
+    "native_changed_entries": 3072,
+    "delta_norm": 31491.054688,
+    "native_rel_change": 1134.005249
+   },
+   "blocks.5.mlp.up_proj.weight": {
+    "shape": [
+     768,
+     256
+    ],
+    "changed_entries": 3072,
+    "native_changed_entries": 3072,
+    "delta_norm": 687.945129,
+    "native_rel_change": 24.980883
+   }
+  }
+ }
+}

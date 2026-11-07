@@ -1,0 +1,21 @@
+# Weight-edit notebook
+No edits yet. Inspecting architecture; original-model baselines next.
+Constraints: closed-form/manual edits only; model execution only through forward tool.
+
+Pass 1: original fails all five illustrative addition prompts; native copy/reverse/max examples succeed. No edit.
+Pass 2: 55 TF examples captured. Best existing first-operand attention top-1 fractions: L4H1 36.3%, L5H3 44.9%, L5H6 35.3%; second-operand retrieval weak (best 16.2%). Plan: closed-form length-dependent retrieval heads.
+Pass 3 probes: current-token classification 100%; length MAE L2=1.947,L3=1.041,L4=.790,L5=.715; best <.4 length error only32.2%. Direct operand readouts near chance. Switching to explicit position/length/retrieval/arithmetic circuit in low-energy embedding-orthogonal residual channels; no edit yet.
+Isolation trial: 35 embedding-orthogonal low-energy channels; captured aggregate energy fraction .0003155 (BOS contributes heavily), channel RMS .996. Projected original outputs and norm-adjusted inputs; pending measurement.
+Isolation measured: pass4 native36/36 preserved, addition0/21; pass5 mixed KL .014062. Staged explicit circuit: 7heads,231neurons, 35 channels; analytic length hats + RoPE retrieval + carry identity + decimal decoder. Awaiting forward verification.
+Working best_1 (edit2): pass7 addition60/60 acrossN1..20, native36/36, 60rescues0losses. Pass6 all6 TF addition correct; English KL .0109,.0150; isolation English7-text mean .023279. Saved work/best_1 and best_1_tensors.pt. Next structural compression: 9 Fourier length features,24 reserved channels.
+Compressed edit3: pass8 English KL .010591 over11texts; pass9 addition54/60 (90%),native36/36. Not best; investigating retrieval numerical failures. best_1 remains100% on same sample.
+Pass10 diagnostics: compressed length phase errors up to~.2, causing BOS retrieval in N8; many TF/greedy differences implicate numerical cancellation. Staged mathematically equivalent10x early-channel amplification with reciprocal downstream reads, not a loss fit.
+Edit4 precision repair: pass11 addition60/60,native9/9. Saved as work/best_2 plus tensor checkpoint. Considering one-shot original-activation reconstruction to improve off-task KL; no iterative optimization.
+Original-signal reconstruction probe heldout R2 early~.42-.45,late~.05-.07; no correction applied. Added explicit newline termination: preceding-a head marks '+' in its constant channel, one final gated newline neuron. No new residual channels.
+Edit5 newline extension: pass12 all7 practice additions +9native correct; five custom zero/carry/all9 examples produce correct digits then newline. Saved work/best_3 and best_3_tensors.pt. Plan broad frozen validation across all1000addition and720native, plus varied English.
+Frozen edit5 broad checks passes14-18: additions250/250 (50 eachN1-5); repeated36 native cases preserved. Pass13 English KL stored in work/fwd_13/kl_per_text.npy. Continuing longer-length and distinct native validation; no new edit.
+Edit5 unchanged, passes14-25: 600/600 additions correct (all50 perN1-12), full answer+newline 600/600. English pass13 eight excerpts meanKL=0.013308. Added parameters=378368.
+Edit5/best_3 frozen validation: all1000/1000 practice additions correct, all1000 exact answer+newline; N1-8 400/400, N9-20 600/600, original0/1000. Native passes34-39 all360/360 acrossN1-6 correct and outputs unchanged. Staged tensors compared to best_3: differences=[]. No post-restart edits.
+Passes34-45 complete native validation: all720 outputs identical original/edited, zero losses/rescues. Copy240/240, reverse240/240,max239/240 both models; baseline failure max_n10_008 unchanged. Next32 fixed evenly spaced English excerpts and arithmetic stress tests. No weight changes.
+Pass46 fixed16x240char corpus excerpts: meanKL .012421,max-text .023193; BPC original1.5934 edited1.6122. Preparing second fixed16 excerpts and arithmetic carry/extreme checks; no fitting/edits.
+Passes46-47: fixed32x240char English sample meanKL=0.01219771, max-excerpt=0.02319339; meanBPC original1.6541 edited1.67435 (rounded). Stress full-answer+newline checks={'48_original': [0, 20], '48_edited': [20, 20], '49_original': [0, 28], '49_edited': [28, 28]}. Next exhaustive100 one-digit operand pairs; edit remainsbest_3.

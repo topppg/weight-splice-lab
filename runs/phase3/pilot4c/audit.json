@@ -1,0 +1,9 @@
+{
+ "python_calls_scanned": 25,
+ "codex_turns_scanned": 81,
+ "codex_turns_tool_free": 81,
+ "violations": 0,
+ "flags": 0,
+ "counts": {},
+ "findings": []
+}

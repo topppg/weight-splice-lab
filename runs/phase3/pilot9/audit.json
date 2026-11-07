@@ -1,0 +1,29 @@
+{
+ "python_calls_scanned": 52,
+ "codex_turns_scanned": 115,
+ "codex_turns_tool_free": 115,
+ "violations": 1,
+ "flags": 1,
+ "counts": {
+  "optimizer/flag": 1,
+  "outside_run_dir/violation": 1
+ },
+ "findings": [
+  {
+   "turn": 6,
+   "run": 3,
+   "rule": "optimizer",
+   "severity": "flag",
+   "where": "code line 25",
+   "text": "f.write(\"Pass 3 captured all 100 N=1 operand pairs (200 answer prediction positions). Planning a single closed-form preservation-constrained readout, not gradient training.\\n\")"
+  },
+  {
+   "turn": 95,
+   "run": 48,
+   "rule": "outside_run_dir",
+   "severity": "violation",
+   "where": "code line 14",
+   "text": "f.write(f\"Candidate B pass34 native180/180 distinct, no outputs changed (181 requests with duplicate). Pass35 exhaustive N1 score: edited {good}/100, including newline {ending}/100; addition evaluatio"
+  }
+ ]
+}

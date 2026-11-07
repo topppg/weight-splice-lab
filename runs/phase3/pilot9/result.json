@@ -1,0 +1,571 @@
+{
+ "run_id": "pilot9",
+ "harness_version": "v3.1",
+ "compliance": "pending_review",
+ "review": null,
+ "provenance": {
+  "harness_version": "v3.1",
+  "git_sha": "eac81f4765c037753dd392bd7cb08278f58714f7",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "8af1a6a9ae857a551c0093a537ed3bf9fd72b389cc4e84d2bf2f89ce21ebe193"
+ },
+ "finalize_provenance": {
+  "harness_version": "v3.1",
+  "git_sha": "eac81f4765c037753dd392bd7cb08278f58714f7",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "8af1a6a9ae857a551c0093a537ed3bf9fd72b389cc4e84d2bf2f89ce21ebe193"
+ },
+ "finalized_at": 1794023287.904279,
+ "config": {
+  "run_id": "pilot9",
+  "condition": "edit_only",
+  "forward_budget": 50,
+  "python_runs": 300,
+  "max_added_params": 1500000,
+  "model": "gpt-6-astra",
+  "profile": "personal",
+  "effort": "high",
+  "handoff_turns": 40,
+  "require_watchdog": true,
+  "handoff_tokens": 180000,
+  "max_limit_points": 3.0,
+  "max_input_tokens": 20000000,
+  "max_turns": 200,
+  "max_attempts": 260,
+  "stale_rate_turns": 3,
+  "kernel_timeout_s": 900.0,
+  "kernel_max_rss_gb": 2.0,
+  "output_chars": 10000
+ },
+ "stop_reason": "done: forward budget used and final edit submitted",
+ "crashed": false,
+ "void": false,
+ "scored": true,
+ "audit_ok": false,
+ "budget_verified": true,
+ "integrity_count": 0,
+ "evaluated_edit": 13,
+ "edit_was_final": true,
+ "counters": {
+  "turn": 115,
+  "thread_id": "01a1b412-d6f3-7080-83b1-4d22846748dd",
+  "since_handoff": 35,
+  "handoffs": 2,
+  "python_runs": 52,
+  "passes": 50,
+  "edits_saved": 13,
+  "latest_edit": 13,
+  "final_edit": 13,
+  "nudges": 0,
+  "failures": 0,
+  "throttles": 0,
+  "refusals": 0,
+  "last_input_tokens": 51162,
+  "thread_totals": {
+   "01a1b3e6-5689-7ff1-8bf5-332f353714d5": {
+    "input_tokens": 1894255,
+    "cached_input_tokens": 1853824,
+    "output_tokens": 57509,
+    "reasoning_output_tokens": 26765
+   },
+   "01a1b401-583b-7be0-98fb-d7552c491c95": {
+    "input_tokens": 1731556,
+    "cached_input_tokens": 1685504,
+    "output_tokens": 38932,
+    "reasoning_output_tokens": 10495
+   },
+   "01a1b412-d6f3-7080-83b1-4d22846748dd": {
+    "input_tokens": 1138062,
+    "cached_input_tokens": 1100928,
+    "output_tokens": 20429,
+    "reasoning_output_tokens": 3546
+   }
+  },
+  "integrity_violations": 0,
+  "tool_errors": 0,
+  "crashed": false,
+  "stop_reason": "done: forward budget used and final edit submitted"
+ },
+ "budget": {
+  "replies": 115,
+  "attempts": 115,
+  "unverified_turns": 0,
+  "budget_verified": true,
+  "usage": {
+   "input_tokens": 4763873,
+   "cached_input_tokens": 4640256,
+   "output_tokens": 116870,
+   "reasoning_output_tokens": 40806
+  },
+  "points_used": 2.0,
+  "points_before_reset": 0.0,
+  "baseline": {
+   "used_percent": 29.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T03-25-21-01a1b3d3-2617-7ac0-b3d3-bf41650f35c5.jsonl",
+   "observed_at": 1794018439.193
+  },
+  "last": {
+   "used_percent": 31.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T04-34-55-01a1b412-d6f3-7080-83b1-4d22846748dd.jsonl",
+   "observed_at": 1794023102.809
+  },
+  "limits": {
+   "max_limit_points": 3.0,
+   "max_input_tokens": 20000000,
+   "max_turns": 200,
+   "max_attempts": 260,
+   "stale_rate_turns": 3
+  }
+ },
+ "edit_manifest": {
+  "edit": 13,
+  "turn": 115,
+  "final": true,
+  "note": "Submit Candidate B, the attention-preserving ten-neuron partial solution. Only ten existing neurons' rows/columns in blocks.5.mlp.gate_proj.weight, up_proj.weight and down_proj.weight change. A task-selective gate and closed-form readout produce digit corrections; embedding, final norm, attention, architecture and parameter count remain unchanged. Evidence: exhaustive N=1 generation100/100 versus original10/100. N=2 practice0/50; sampled N=3\u201320 also0 correct, so this does NOT solve general multi-digit addition. Full native practice: edited copy239/240,reverse240/240,max239/240 versus original240/240,240/240,239/240. One additional copy loss; targeted stress tests reveal related gate leakage. Four recent eight-excerpt Wikipedia batches have mean KL .003463,.012033,.011173,.017041 nats. Selected over marker/table variants because those caused worse preservation damage. Expect reliable N=1 answer digits only, not newline termination or multi-digit generalization; preservation is approximate, not intact.",
+  "validation": {
+   "condition": "edit_only",
+   "arch": {
+    "n_heads": [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ],
+    "d_mlp": [
+     768,
+     768,
+     768,
+     768,
+     768,
+     768
+    ]
+   },
+   "added_heads": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_neurons": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_params": 0,
+   "tensors": {
+    "blocks.5.mlp.down_proj.weight": {
+     "shape": [
+      256,
+      768
+     ],
+     "changed_entries": 2560,
+     "native_changed_entries": 2560,
+     "delta_norm": 5.389243,
+     "native_rel_change": 0.199025
+    },
+    "blocks.5.mlp.gate_proj.weight": {
+     "shape": [
+      768,
+      256
+     ],
+     "changed_entries": 2560,
+     "native_changed_entries": 2560,
+     "delta_norm": 1197.919678,
+     "native_rel_change": 43.137558
+    },
+    "blocks.5.mlp.up_proj.weight": {
+     "shape": [
+      768,
+      256
+     ],
+     "changed_entries": 2560,
+     "native_changed_entries": 2560,
+     "delta_norm": 66.717461,
+     "native_rel_change": 2.422666
+    }
+   }
+  }
+ },
+ "hidden_eval": {
+  "addition_by_n": {
+   "1": 1.0,
+   "2": 0.0,
+   "3": 0.005,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.125625,
+  "addition_mean_n9_20": 0.0,
+  "text_bpc": 1.720571677207528,
+  "text_kl": 0.012525518424808979,
+  "native": {
+   "copy": 0.9975,
+   "reverse": 1.0,
+   "max": 0.9941666666666666
+  },
+  "meets_bar": true,
+  "params": 5140480,
+  "n_per_length": 200,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "robustness": {
+   "thresholds": {
+    "a_prefixed_text_kl_lt": 0.05,
+    "b_termination_ge": 0.95,
+    "c_not_first_line_ge": 0.95
+   },
+   "a_prefixed_text": {
+    "kl": 0.017611434566788375,
+    "bpc": 1.9205502981638096,
+    "bpc_base": 1.895787741642461,
+    "n_chunks": 256,
+    "pass": true
+   },
+   "b_termination": {
+    "end_token": "\n",
+    "terminated": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "strict_accuracy": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "pass": false
+   },
+   "c_not_first_line": {
+    "after_native_lines": {
+     "by_n": {
+      "1": 0.01,
+      "2": 0.005,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.001875
+    },
+    "after_text": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "min_mean": 0.0,
+    "pass": false
+   },
+   "d_length_n21_30": {
+    "by_n": {
+     "21": 0.0,
+     "22": 0.0,
+     "23": 0.0,
+     "24": 0.0,
+     "25": 0.0,
+     "26": 0.0,
+     "27": 0.0,
+     "28": 0.0,
+     "29": 0.0,
+     "30": 0.0
+    },
+    "mean": 0.0
+   },
+   "e_native_weight_change": {
+    "total_rel": 8.709115288691745,
+    "max_rel": 43.137510159951134,
+    "changed_tensors": 3,
+    "n_tensors": 56,
+    "per_tensor_rel": {
+     "blocks.5.mlp.gate_proj.weight": 43.137510159951134,
+     "blocks.5.mlp.up_proj.weight": 2.4226624961168115,
+     "blocks.5.mlp.down_proj.weight": 0.19902466470485405
+    }
+   },
+   "f_added_params": {
+    "allocated": 0,
+    "nonzero": 0,
+    "inactive": 0,
+    "active": 0,
+    "nonzero_active": 0
+   }
+  },
+  "seconds": 184.4,
+  "edit": "~/wsl-runs/pilot9/harness/edits/edit_13/edit.pt"
+ },
+ "base_eval": {
+  "addition_by_n": {
+   "1": 0.1,
+   "2": 0.0,
+   "3": 0.005,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.013125000000000001,
+  "addition_mean_n9_20": 0.0,
+  "text_bpc": 1.7025943952063325,
+  "text_kl": 0.0,
+  "native": {
+   "copy": 1.0,
+   "reverse": 1.0,
+   "max": 1.0
+  },
+  "meets_bar": true,
+  "params": 5140480,
+  "n_per_length": 200,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "robustness": {
+   "thresholds": {
+    "a_prefixed_text_kl_lt": 0.05,
+    "b_termination_ge": 0.95,
+    "c_not_first_line_ge": 0.95
+   },
+   "a_prefixed_text": {
+    "kl": 0.0,
+    "bpc": 1.895787741642461,
+    "bpc_base": 1.895787741642461,
+    "n_chunks": 256,
+    "pass": true
+   },
+   "b_termination": {
+    "end_token": "\n",
+    "terminated": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "strict_accuracy": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "pass": false
+   },
+   "c_not_first_line": {
+    "after_native_lines": {
+     "by_n": {
+      "1": 0.075,
+      "2": 0.005,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.01
+    },
+    "after_text": {
+     "by_n": {
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0
+     },
+     "mean": 0.0
+    },
+    "min_mean": 0.0,
+    "pass": false
+   },
+   "d_length_n21_30": {
+    "by_n": {
+     "21": 0.0,
+     "22": 0.0,
+     "23": 0.0,
+     "24": 0.0,
+     "25": 0.0,
+     "26": 0.0,
+     "27": 0.0,
+     "28": 0.0,
+     "29": 0.0,
+     "30": 0.0
+    },
+    "mean": 0.0
+   },
+   "e_native_weight_change": {
+    "total_rel": 0.0,
+    "max_rel": 0.0,
+    "changed_tensors": 0,
+    "n_tensors": 56,
+    "per_tensor_rel": {}
+   },
+   "f_added_params": {
+    "allocated": 0,
+    "nonzero": 0,
+    "inactive": 0,
+    "active": 0,
+    "nonzero_active": 0
+   }
+  },
+  "seconds": 206.6,
+  "edit": null,
+  "cache_key": {
+   "checkpoint_sha256": "5d5883a2c4181584bfd24371d83d4610df9bc46db7f0f41fc011685d57bdee5d",
+   "eval_code_sha256": "3421b7661e3501e5e07e493ab39bee4c9455a940d8fe0539f49d49dcd3e7ff47",
+   "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+   "seeds": {
+    "addition": 4321,
+    "native": 1234,
+    "text": 0,
+    "prefix_text": 7,
+    "not_first_line": 4323,
+    "long": 4325
+   },
+   "thresholds": {
+    "kl": 0.05,
+    "native": 0.98,
+    "addition": 0.95,
+    "prefixed_kl": 0.05,
+    "termination": 0.95,
+    "not_first_line": 0.95
+   },
+   "n_per": 200
+  }
+ },
+ "eval_key": {
+  "checkpoint_sha256": "5d5883a2c4181584bfd24371d83d4610df9bc46db7f0f41fc011685d57bdee5d",
+  "eval_code_sha256": "3421b7661e3501e5e07e493ab39bee4c9455a940d8fe0539f49d49dcd3e7ff47",
+  "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+  "seeds": {
+   "addition": 4321,
+   "native": 1234,
+   "text": 0,
+   "prefix_text": 7,
+   "not_first_line": 4323,
+   "long": 4325
+  },
+  "thresholds": {
+   "kl": 0.05,
+   "native": 0.98,
+   "addition": 0.95,
+   "prefixed_kl": 0.05,
+   "termination": 0.95,
+   "not_first_line": 0.95
+  },
+  "n_per": 200
+ },
+ "integrity": {
+  "violations": 0,
+  "corrupt_lines": 0,
+  "rows": []
+ },
+ "audit": {
+  "python_calls_scanned": 52,
+  "codex_turns_scanned": 115,
+  "codex_turns_tool_free": 115,
+  "violations": 1,
+  "flags": 1,
+  "counts": {
+   "optimizer/flag": 1,
+   "outside_run_dir/violation": 1
+  },
+  "findings": [
+   {
+    "turn": 6,
+    "run": 3,
+    "rule": "optimizer",
+    "severity": "flag",
+    "where": "code line 25",
+    "text": "f.write(\"Pass 3 captured all 100 N=1 operand pairs (200 answer prediction positions). Planning a single closed-form preservation-constrained readout, not gradient training.\\n\")"
+   },
+   {
+    "turn": 95,
+    "run": 48,
+    "rule": "outside_run_dir",
+    "severity": "violation",
+    "where": "code line 14",
+    "text": "f.write(f\"Candidate B pass34 native180/180 distinct, no outputs changed (181 requests with duplicate). Pass35 exhaustive N1 score: edited {good}/100, including newline {ending}/100; addition evaluatio"
+   }
+  ]
+ },
+ "errors": {}
+}
