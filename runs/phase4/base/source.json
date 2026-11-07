@@ -1,0 +1,6 @@
+{
+ "hf_model": "unsloth/gemma-3-270m-it",
+ "revision": "23cf460f6bb16954176b3ddcc8d4f250501458a9",
+ "params": 268098176,
+ "dtype": "bfloat16"
+}
