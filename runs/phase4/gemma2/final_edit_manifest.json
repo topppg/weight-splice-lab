@@ -1,0 +1,164 @@
+{
+ "edit": 24,
+ "turn": 159,
+ "final": true,
+ "note": "Final candidate unchanged from edit21/23: two added layer17 retrieval heads and407 MLP neurons,2,092,160 added parameters; all native entries/embedding/final norm unchanged. Seven prototype N1 repairs plus confidence-gated operand-pair boosts with fixed soft carry preference; closed-form constructions only. Evidence: all400 practice N1\u20138 original108/400(27%) vs edited124/400(31%); edited byN=100,74,46,28,0,0,0,0 percent. Independent fresh64:16->19 correct,3rescues/0losses. Exhaustive100 N1:93->99,with3+4 regression; smaller N1-only patch had100. N9\u201320 0/60 both; N21\u201330 0/20 both. Sixteen chat-addition outputs unchanged,no demonstrated transfer. Preservation on actual practice controls:pooled10 Wikipedia excerpts token-KL .03465; pooled12 chat reply samples .03541,but second chat batch alone .06239 exceeds .05. Digit-dense Wiki8 excerpts meanKL .015461. Local large divergences and held-out uncertainty remain; final16-chat check pending. DOES NOT MEET the95% accuracy bar and is NOT a general multi-digit addition solution. Retained for modest independently observed short-addition gain, not claimed success.",
+ "validation": {
+  "condition": "add_capacity",
+  "arch": {
+   "n_heads": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    6
+   ],
+   "d_mlp": [
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2455
+   ]
+  },
+  "added_heads": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   2
+  ],
+  "added_neurons": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   407
+  ],
+  "added_params": 2092160,
+  "tensors": {
+   "blocks.17.attn.k_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 40960,
+    "native_changed_entries": 0,
+    "delta_norm": 0.665931,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1536
+    ],
+    "changed_entries": 13440,
+    "native_changed_entries": 0,
+    "delta_norm": 9.165152,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.attn.q_proj.weight": {
+    "shape": [
+     1536,
+     640
+    ],
+    "changed_entries": 40960,
+    "native_changed_entries": 0,
+    "delta_norm": 0.704266,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.attn.v_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 13440,
+    "native_changed_entries": 0,
+    "delta_norm": 1.526807,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2455
+    ],
+    "changed_entries": 260480,
+    "native_changed_entries": 0,
+    "delta_norm": 0.970863,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.gate_proj.weight": {
+    "shape": [
+     2455,
+     640
+    ],
+    "changed_entries": 260480,
+    "native_changed_entries": 0,
+    "delta_norm": 5449.105469,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.up_proj.weight": {
+    "shape": [
+     2455,
+     640
+    ],
+    "changed_entries": 260480,
+    "native_changed_entries": 0,
+    "delta_norm": 25.051764,
+    "native_rel_change": 0.0
+   }
+  }
+ }
+}

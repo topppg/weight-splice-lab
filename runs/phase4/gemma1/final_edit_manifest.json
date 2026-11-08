@@ -1,0 +1,124 @@
+{
+ "edit": 4,
+ "turn": 31,
+ "final": true,
+ "note": "Partial result, not a solution to the requested multi-digit task. Added seven layer-17 MLP neurons (six active), totaling 13,440 parameters; all native weights remain unchanged. Closed-form localized gates and analytically constrained output directions repair seven single-digit failures. Exhaustive greedy N1 accuracy improved from 93/100 to 100/100. Final independent practice sample: mean N1\u20138 accuracy 33.75%, below the required 95%; sampled N2\u201320 and chat-addition outputs unchanged. Final preservation checks measured exactly zero KL on 480 ordinary-Wikipedia tokens, 640 number-rich tokens, and 494 chat-reply tokens, with zero added-neuron activation. These limited checks support localization, not guaranteed held-out preservation. No improvement is claimed for multi-digit addition; N21\u201330 were not tested. Details are in work/final_report.json and work/notes.md.",
+ "validation": {
+  "condition": "add_capacity",
+  "arch": {
+   "n_heads": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "d_mlp": [
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2055
+   ]
+  },
+  "added_heads": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_neurons": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   7
+  ],
+  "added_params": 13440,
+  "tensors": {
+   "blocks.17.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2055
+    ],
+    "changed_entries": 3840,
+    "native_changed_entries": 0,
+    "delta_norm": 6196774.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.gate_proj.weight": {
+    "shape": [
+     2055,
+     640
+    ],
+    "changed_entries": 3840,
+    "native_changed_entries": 0,
+    "delta_norm": 101.545303,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.up_proj.weight": {
+    "shape": [
+     2055,
+     640
+    ],
+    "changed_entries": 3840,
+    "native_changed_entries": 0,
+    "delta_norm": 1.779131,
+    "native_rel_change": 0.0
+   }
+  }
+ }
+}

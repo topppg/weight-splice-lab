@@ -1,0 +1,544 @@
+{
+ "run_id": "gemma_rev1",
+ "harness_version": "v4",
+ "compliance": "pending_review",
+ "review": null,
+ "provenance": {
+  "harness_version": "v4",
+  "git_sha": "e2d5eb725006f4bcf033eb2e3fb5b1c8f45e78bf",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "51b11ed2176e6ad2d0bf7e6f116ca3dcdca5f6fa679e2c1839d8d6579b07754d"
+ },
+ "finalize_provenance": {
+  "harness_version": "v4",
+  "git_sha": "e2d5eb725006f4bcf033eb2e3fb5b1c8f45e78bf",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "51b11ed2176e6ad2d0bf7e6f116ca3dcdca5f6fa679e2c1839d8d6579b07754d"
+ },
+ "finalized_at": 1794096935.36797,
+ "config": {
+  "run_id": "gemma_rev1",
+  "family": "gemma_rev",
+  "condition": "add_capacity",
+  "forward_budget": 50,
+  "python_runs": 300,
+  "max_added_params": 10000000,
+  "model": "gpt-6-astra",
+  "profile": "personal",
+  "effort": "high",
+  "handoff_turns": 40,
+  "require_watchdog": true,
+  "handoff_tokens": 180000,
+  "max_limit_points": 8.0,
+  "max_input_tokens": 20000000,
+  "max_turns": 200,
+  "max_attempts": 260,
+  "stale_rate_turns": 3,
+  "kernel_timeout_s": 900.0,
+  "kernel_max_rss_gb": 3.0,
+  "output_chars": 10000,
+  "allow_end": false
+ },
+ "stop_reason": "done: forward budget used and final edit submitted",
+ "crashed": false,
+ "void": false,
+ "scored": true,
+ "audit_ok": true,
+ "budget_verified": true,
+ "integrity_count": 0,
+ "evaluated_edit": 29,
+ "edit_was_final": true,
+ "counters": {
+  "turn": 195,
+  "thread_id": "01a1b865-80c4-76a1-9b91-4450ed0e0b43",
+  "since_handoff": 35,
+  "handoffs": 4,
+  "python_runs": 115,
+  "passes": 50,
+  "edits_saved": 29,
+  "latest_edit": 29,
+  "final_edit": 29,
+  "nudges": 0,
+  "failures": 0,
+  "throttles": 0,
+  "refusals": 0,
+  "last_input_tokens": 90342,
+  "thread_totals": {
+   "01a1b80c-fef2-7241-9ad6-9f0f29406b24": {
+    "input_tokens": 1760943,
+    "cached_input_tokens": 1724672,
+    "output_tokens": 64733,
+    "reasoning_output_tokens": 38587
+   },
+   "01a1b82f-5a43-7c93-bd30-0aeffe7e27eb": {
+    "input_tokens": 1456060,
+    "cached_input_tokens": 1410816,
+    "output_tokens": 30114,
+    "reasoning_output_tokens": 12737
+   },
+   "01a1b83f-973b-7a33-8ff4-7bdc438c3c2c": {
+    "input_tokens": 1973932,
+    "cached_input_tokens": 1908864,
+    "output_tokens": 32377,
+    "reasoning_output_tokens": 14457
+   },
+   "01a1b851-1839-7b60-bca0-35dbe9a5d6cb": {
+    "input_tokens": 2140403,
+    "cached_input_tokens": 2080128,
+    "output_tokens": 39495,
+    "reasoning_output_tokens": 13742
+   },
+   "01a1b865-80c4-76a1-9b91-4450ed0e0b43": {
+    "input_tokens": 1734238,
+    "cached_input_tokens": 1678080,
+    "output_tokens": 40383,
+    "reasoning_output_tokens": 4300
+   }
+  },
+  "ended_by_editor": false,
+  "integrity_violations": 0,
+  "tool_errors": 0,
+  "crashed": false,
+  "stop_reason": "done: forward budget used and final edit submitted"
+ },
+ "budget": {
+  "replies": 195,
+  "attempts": 195,
+  "unverified_turns": 0,
+  "budget_verified": true,
+  "usage": {
+   "input_tokens": 9065576,
+   "cached_input_tokens": 8802560,
+   "output_tokens": 207102,
+   "reasoning_output_tokens": 83823
+  },
+  "points_used": 4.0,
+  "points_before_reset": 0.0,
+  "baseline": {
+   "used_percent": 35.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T22-49-04-01a1b7fc-903b-7bc3-8fdb-68058785ae4c.jsonl",
+   "observed_at": 1794088561.239
+  },
+  "last": {
+   "used_percent": 39.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-08T00-43-42-01a1b865-80c4-76a1-9b91-4450ed0e0b43.jsonl",
+   "observed_at": 1794096497.554
+  },
+  "limits": {
+   "max_limit_points": 8.0,
+   "max_input_tokens": 20000000,
+   "max_turns": 200,
+   "max_attempts": 260,
+   "stale_rate_turns": 3
+  }
+ },
+ "edit_manifest": {
+  "edit": 29,
+  "turn": 195,
+  "final": true,
+  "note": "Partial result; requested accuracy bar NOT met. Added 1235 MLP17 neurons (2,371,200 parameters) using closed-form localized detectors and output directions; disabled seven off-task-leaking output columns. All native weights, embeddings, final norm, and attention remain unchanged. Final evidence: exhaustive N1 99/100 versus original8/100; independent N2 5/80 versus0/80; practice N1 50/50, N2 6/50, N3\u201320 0/180; mean N1\u20138 accuracy14%, below95%. N21\u201330 diagnostic0/10. All160 normal-addition 48-token outputs identical, accuracy43/160 both; all16 chat-addition outputs identical. Final41-text arithmetic/prose/chat/number control batch reported KL0, including chat-reply-only scoring. Expect localized one-digit improvement and limited N2 gains, not general multi-digit arithmetic; unseen preservation remains unproven. Final backup work/final_partial; results work/final_summary.json and work/notes.md.",
+  "validation": {
+   "condition": "add_capacity",
+   "arch": {
+    "n_heads": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "d_mlp": [
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     3283
+    ]
+   },
+   "added_heads": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_neurons": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1235
+   ],
+   "added_params": 2371200,
+   "tensors": {
+    "blocks.17.mlp.down_proj.weight": {
+     "shape": [
+      640,
+      3283
+     ],
+     "changed_entries": 785920,
+     "native_changed_entries": 0,
+     "delta_norm": 8865129.0,
+     "native_rel_change": 0.0
+    },
+    "blocks.17.mlp.gate_proj.weight": {
+     "shape": [
+      3283,
+      640
+     ],
+     "changed_entries": 790400,
+     "native_changed_entries": 0,
+     "delta_norm": 833649.25,
+     "native_rel_change": 0.0
+    },
+    "blocks.17.mlp.up_proj.weight": {
+     "shape": [
+      3283,
+      640
+     ],
+     "changed_entries": 790400,
+     "native_changed_entries": 0,
+     "delta_norm": 25.56708,
+     "native_rel_change": 0.0
+    }
+   }
+  }
+ },
+ "hidden_eval": {
+  "task": "reversed",
+  "addition_by_n": {
+   "1": 0.995,
+   "2": 0.055,
+   "3": 0.0,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.13125,
+  "addition_mean_n9_20": 0.0,
+  "length_n21_30": {
+   "by_n": {
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0
+   },
+   "mean": 0.0
+  },
+  "text_kl": 0.009617505813919208,
+  "text_nll": 4.7320715149243675,
+  "text_nll_base": 4.7224084608695085,
+  "digit_text_kl": 0.004170673268534861,
+  "digit_text_nll": 4.47838047766218,
+  "digit_text_nll_base": 4.474057324727377,
+  "chat_kl": 0.01896791248409598,
+  "chat_nll": 0.28627891766938834,
+  "chat_nll_base": 0.26720378271362066,
+  "chat_addition": {
+   "by_n": {
+    "1": 0.66,
+    "2": 0.06,
+    "3": 0.02,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.0925
+  },
+  "plain_addition_n1_8": {
+   "by_n": {
+    "1": 0.91,
+    "2": 0.6,
+    "3": 0.385,
+    "4": 0.06,
+    "5": 0.005,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.245
+  },
+  "positions": {
+   "text": 65280,
+   "digit_text": 32640,
+   "chat": 14597
+  },
+  "native_weight_change": {
+   "total_rel": 0.0,
+   "max_rel": 0.0,
+   "changed_tensors": 0,
+   "n_tensors": 236,
+   "per_tensor_rel": {}
+  },
+  "added_params": {
+   "allocated": 2371200,
+   "nonzero": 2366720,
+   "inactive": 13440,
+   "active": 2357760,
+   "nonzero_active": 2357760
+  },
+  "thresholds": {
+   "text_kl_lt": 0.05,
+   "chat_kl_lt": 0.05,
+   "digit_text_kl_lt": 0.05,
+   "addition_mean_n1_8_ge": 0.95
+  },
+  "meets_bar": true,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "params": 270469376,
+  "n_per_length": 200,
+  "section_seconds": {
+   "load_data": 0.8,
+   "addition": 87.2,
+   "length_n21_30": 125.4,
+   "plain_addition": 17.3,
+   "chat_addition": 7.6,
+   "text_kl": 107.3,
+   "digit_text_kl": 52.6,
+   "chat_kl": 36.0
+  },
+  "seconds": 434.7,
+  "edit": "~/wsl-runs/gemma_rev1/harness/edits/edit_29/edit.pt"
+ },
+ "base_eval": {
+  "task": "reversed",
+  "addition_by_n": {
+   "1": 0.075,
+   "2": 0.0,
+   "3": 0.0,
+   "4": 0.0,
+   "5": 0.0,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.009375,
+  "addition_mean_n9_20": 0.0,
+  "length_n21_30": {
+   "by_n": {
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0
+   },
+   "mean": 0.0
+  },
+  "text_kl": 0.0,
+  "text_nll": 4.7224084608695085,
+  "text_nll_base": 4.7224084608695085,
+  "digit_text_kl": 0.0,
+  "digit_text_nll": 4.474057324727377,
+  "digit_text_nll_base": 4.474057324727377,
+  "chat_kl": 0.0,
+  "chat_nll": 0.26720378271362066,
+  "chat_nll_base": 0.26720378271362066,
+  "chat_addition": {
+   "by_n": {
+    "1": 0.66,
+    "2": 0.06,
+    "3": 0.02,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.0925
+  },
+  "plain_addition_n1_8": {
+   "by_n": {
+    "1": 0.935,
+    "2": 0.68,
+    "3": 0.4,
+    "4": 0.065,
+    "5": 0.005,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.260625
+  },
+  "positions": {
+   "text": 65280,
+   "digit_text": 32640,
+   "chat": 14597
+  },
+  "native_weight_change": {
+   "total_rel": 0.0,
+   "max_rel": 0.0,
+   "changed_tensors": 0,
+   "n_tensors": 236,
+   "per_tensor_rel": {}
+  },
+  "added_params": {
+   "allocated": 0,
+   "nonzero": 0,
+   "inactive": 0,
+   "active": 0,
+   "nonzero_active": 0
+  },
+  "thresholds": {
+   "text_kl_lt": 0.05,
+   "chat_kl_lt": 0.05,
+   "digit_text_kl_lt": 0.05,
+   "addition_mean_n1_8_ge": 0.95
+  },
+  "meets_bar": true,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "params": 268098176,
+  "n_per_length": 200,
+  "section_seconds": {
+   "load_data": 1.1,
+   "addition": 98.6,
+   "length_n21_30": 138.0,
+   "plain_addition": 18.6,
+   "chat_addition": 8.4,
+   "text_kl": 113.6,
+   "digit_text_kl": 56.4,
+   "chat_kl": 37.1
+  },
+  "seconds": 472.1,
+  "edit": null,
+  "cache_key": {
+   "checkpoint_sha256": "3fb9e8716c97002e1587209d3eb47760d1e6701c1a69561511f5ff2fb65e8f25",
+   "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+   "chat_hidden_sha256": "b9c40173767dcd982455e21cb4549f7179d13a65a72817ecd498a1806ccd55be",
+   "eval_code_sha256": "26e006add685ce6a7df1943a1c83861490728459361c8fd5d15c37ca4906c0e4",
+   "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+   "seeds": {
+    "addition": 4321,
+    "long": 4325,
+    "chat_addition": 4327,
+    "text": 0,
+    "digit_text": 7,
+    "task_addition": 4331,
+    "task_long": 4335
+   },
+   "task": "reversed",
+   "thresholds": {
+    "kl": 0.05,
+    "addition": 0.95,
+    "digit_frac": 0.03
+   },
+   "n_per": 200
+  }
+ },
+ "eval_key": null,
+ "integrity": {
+  "violations": 0,
+  "corrupt_lines": 0,
+  "rows": []
+ },
+ "audit": {
+  "python_calls_scanned": 115,
+  "codex_turns_scanned": 195,
+  "codex_turns_tool_free": 195,
+  "violations": 0,
+  "flags": 0,
+  "counts": {},
+  "findings": []
+ },
+ "errors": {
+  "eval_key": "Traceback (most recent call last):\n  File \"<repo>/src/weight_splice_lab/harness/driver.py\", line 607, in _try\n    return fn()\n           ^^^^\n  File \"<repo>/src/weight_splice_lab/harness/driver.py\", line 653, in <lambda>\n    key = _try(errors, \"eval_key\", lambda: ev.eval_key(base_ckpt, n_per))\n                                           ^^^^^^^^^^^\nAttributeError: module 'weight_splice_lab.gemma.evaluate_reversed' has no attribute 'eval_key'\n"
+ }
+}

@@ -1,0 +1,503 @@
+{
+ "run_id": "gemma1",
+ "harness_version": "v4",
+ "compliance": "pending_review",
+ "review": null,
+ "provenance": {
+  "harness_version": "v4",
+  "git_sha": "6f6618cb4936d7cefa5987d5c7cdd680a8f3e0d5",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "9078a7f370ddd21eb6b47e7c074b28647d0c777f700758baf0fb6c39b3638c63"
+ },
+ "finalize_provenance": {
+  "harness_version": "v4",
+  "git_sha": "6f6618cb4936d7cefa5987d5c7cdd680a8f3e0d5",
+  "dirty": false,
+  "dirty_files": [],
+  "harness_source_sha256": "9078a7f370ddd21eb6b47e7c074b28647d0c777f700758baf0fb6c39b3638c63"
+ },
+ "finalized_at": 1794076150.939668,
+ "config": {
+  "run_id": "gemma1",
+  "family": "gemma",
+  "condition": "add_capacity",
+  "forward_budget": 50,
+  "python_runs": 300,
+  "max_added_params": 10000000,
+  "model": "gpt-6-astra",
+  "profile": "personal",
+  "effort": "high",
+  "handoff_turns": 40,
+  "require_watchdog": true,
+  "handoff_tokens": 180000,
+  "max_limit_points": 8.0,
+  "max_input_tokens": 20000000,
+  "max_turns": 200,
+  "max_attempts": 260,
+  "stale_rate_turns": 3,
+  "kernel_timeout_s": 900.0,
+  "kernel_max_rss_gb": 3.0,
+  "output_chars": 10000
+ },
+ "stop_reason": "done: final edit submitted and the session ended by the editor with 39 forward passes left",
+ "crashed": false,
+ "void": false,
+ "scored": true,
+ "audit_ok": true,
+ "budget_verified": true,
+ "integrity_count": 0,
+ "evaluated_edit": 4,
+ "edit_was_final": true,
+ "counters": {
+  "turn": 31,
+  "thread_id": "01a1b723-3c82-7593-969c-34c7dfea1d93",
+  "since_handoff": 31,
+  "handoffs": 0,
+  "python_runs": 15,
+  "passes": 11,
+  "edits_saved": 4,
+  "latest_edit": 4,
+  "final_edit": 4,
+  "nudges": 0,
+  "failures": 0,
+  "throttles": 0,
+  "refusals": 0,
+  "last_input_tokens": 77058,
+  "thread_totals": {
+   "01a1b723-3c82-7593-969c-34c7dfea1d93": {
+    "input_tokens": 1262264,
+    "cached_input_tokens": 1221888,
+    "output_tokens": 42421,
+    "reasoning_output_tokens": 16589
+   }
+  },
+  "ended_by_editor": true,
+  "integrity_violations": 0,
+  "tool_errors": 0,
+  "crashed": false,
+  "stop_reason": "done: final edit submitted and the session ended by the editor with 39 forward passes left"
+ },
+ "budget": {
+  "replies": 31,
+  "attempts": 31,
+  "unverified_turns": 0,
+  "budget_verified": true,
+  "usage": {
+   "input_tokens": 1262264,
+   "cached_input_tokens": 1221888,
+   "output_tokens": 42421,
+   "reasoning_output_tokens": 16589
+  },
+  "points_used": 1.0,
+  "points_before_reset": 0.0,
+  "baseline": {
+   "used_percent": 31.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T18-34-35-01a1b713-909b-7c30-827f-bc9585fc90da.jsonl",
+   "observed_at": 1794073238.27
+  },
+  "last": {
+   "used_percent": 32.0,
+   "resets_at": 1794390356,
+   "window_minutes": 10080,
+   "source": "rollout:rollout-2026-11-07T18-51-42-01a1b723-3c82-7593-969c-34c7dfea1d93.jsonl",
+   "observed_at": 1794075338.741
+  },
+  "limits": {
+   "max_limit_points": 8.0,
+   "max_input_tokens": 20000000,
+   "max_turns": 200,
+   "max_attempts": 260,
+   "stale_rate_turns": 3
+  }
+ },
+ "edit_manifest": {
+  "edit": 4,
+  "turn": 31,
+  "final": true,
+  "note": "Partial result, not a solution to the requested multi-digit task. Added seven layer-17 MLP neurons (six active), totaling 13,440 parameters; all native weights remain unchanged. Closed-form localized gates and analytically constrained output directions repair seven single-digit failures. Exhaustive greedy N1 accuracy improved from 93/100 to 100/100. Final independent practice sample: mean N1\u20138 accuracy 33.75%, below the required 95%; sampled N2\u201320 and chat-addition outputs unchanged. Final preservation checks measured exactly zero KL on 480 ordinary-Wikipedia tokens, 640 number-rich tokens, and 494 chat-reply tokens, with zero added-neuron activation. These limited checks support localization, not guaranteed held-out preservation. No improvement is claimed for multi-digit addition; N21\u201330 were not tested. Details are in work/final_report.json and work/notes.md.",
+  "validation": {
+   "condition": "add_capacity",
+   "arch": {
+    "n_heads": [
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4,
+     4
+    ],
+    "d_mlp": [
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2048,
+     2055
+    ]
+   },
+   "added_heads": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "added_neurons": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7
+   ],
+   "added_params": 13440,
+   "tensors": {
+    "blocks.17.mlp.down_proj.weight": {
+     "shape": [
+      640,
+      2055
+     ],
+     "changed_entries": 3840,
+     "native_changed_entries": 0,
+     "delta_norm": 6196774.0,
+     "native_rel_change": 0.0
+    },
+    "blocks.17.mlp.gate_proj.weight": {
+     "shape": [
+      2055,
+      640
+     ],
+     "changed_entries": 3840,
+     "native_changed_entries": 0,
+     "delta_norm": 101.545303,
+     "native_rel_change": 0.0
+    },
+    "blocks.17.mlp.up_proj.weight": {
+     "shape": [
+      2055,
+      640
+     ],
+     "changed_entries": 3840,
+     "native_changed_entries": 0,
+     "delta_norm": 1.779131,
+     "native_rel_change": 0.0
+    }
+   }
+  }
+ },
+ "hidden_eval": {
+  "addition_by_n": {
+   "1": 1.0,
+   "2": 0.68,
+   "3": 0.4,
+   "4": 0.065,
+   "5": 0.005,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.26875,
+  "addition_mean_n9_20": 0.0,
+  "length_n21_30": {
+   "by_n": {
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0
+   },
+   "mean": 0.0
+  },
+  "text_kl": 0.000386692429792947,
+  "text_nll": 4.722132187497382,
+  "text_nll_base": 4.7224084608695085,
+  "digit_text_kl": 0.0009608417498048914,
+  "digit_text_nll": 4.474288925937578,
+  "digit_text_nll_base": 4.474057324727377,
+  "chat_kl": 0.002198718653104097,
+  "chat_nll": 0.2694156060330001,
+  "chat_nll_base": 0.26720378271362066,
+  "chat_addition": {
+   "by_n": {
+    "1": 0.66,
+    "2": 0.06,
+    "3": 0.02,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.0925
+  },
+  "positions": {
+   "text": 65280,
+   "digit_text": 32640,
+   "chat": 14597
+  },
+  "native_weight_change": {
+   "total_rel": 0.0,
+   "max_rel": 0.0,
+   "changed_tensors": 0,
+   "n_tensors": 236,
+   "per_tensor_rel": {}
+  },
+  "added_params": {
+   "allocated": 13440,
+   "nonzero": 11520,
+   "inactive": 1920,
+   "active": 11520,
+   "nonzero_active": 11520
+  },
+  "thresholds": {
+   "text_kl_lt": 0.05,
+   "chat_kl_lt": 0.05,
+   "digit_text_kl_lt": 0.05,
+   "addition_mean_n1_8_ge": 0.95
+  },
+  "meets_bar": true,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "params": 268111616,
+  "n_per_length": 200,
+  "section_seconds": {
+   "load_data": 0.9,
+   "addition": 73.7,
+   "length_n21_30": 105.3,
+   "chat_addition": 6.8,
+   "text_kl": 106.2,
+   "digit_text_kl": 52.2,
+   "chat_kl": 36.0
+  },
+  "seconds": 381.3,
+  "edit": "~/wsl-runs/gemma1/harness/edits/edit_4/edit.pt"
+ },
+ "base_eval": {
+  "addition_by_n": {
+   "1": 0.935,
+   "2": 0.68,
+   "3": 0.4,
+   "4": 0.065,
+   "5": 0.005,
+   "6": 0.0,
+   "7": 0.0,
+   "8": 0.0,
+   "9": 0.0,
+   "10": 0.0,
+   "11": 0.0,
+   "12": 0.0,
+   "13": 0.0,
+   "14": 0.0,
+   "15": 0.0,
+   "16": 0.0,
+   "17": 0.0,
+   "18": 0.0,
+   "19": 0.0,
+   "20": 0.0
+  },
+  "addition_mean_n1_8": 0.260625,
+  "addition_mean_n9_20": 0.0,
+  "length_n21_30": {
+   "by_n": {
+    "21": 0.0,
+    "22": 0.0,
+    "23": 0.0,
+    "24": 0.0,
+    "25": 0.0,
+    "26": 0.0,
+    "27": 0.0,
+    "28": 0.0,
+    "29": 0.0,
+    "30": 0.0
+   },
+   "mean": 0.0
+  },
+  "text_kl": 0.0,
+  "text_nll": 4.7224084608695085,
+  "text_nll_base": 4.7224084608695085,
+  "digit_text_kl": 0.0,
+  "digit_text_nll": 4.474057324727377,
+  "digit_text_nll_base": 4.474057324727377,
+  "chat_kl": 0.0,
+  "chat_nll": 0.26720378271362066,
+  "chat_nll_base": 0.26720378271362066,
+  "chat_addition": {
+   "by_n": {
+    "1": 0.66,
+    "2": 0.06,
+    "3": 0.02,
+    "4": 0.0,
+    "5": 0.0,
+    "6": 0.0,
+    "7": 0.0,
+    "8": 0.0
+   },
+   "mean": 0.0925
+  },
+  "positions": {
+   "text": 65280,
+   "digit_text": 32640,
+   "chat": 14597
+  },
+  "native_weight_change": {
+   "total_rel": 0.0,
+   "max_rel": 0.0,
+   "changed_tensors": 0,
+   "n_tensors": 236,
+   "per_tensor_rel": {}
+  },
+  "added_params": {
+   "allocated": 0,
+   "nonzero": 0,
+   "inactive": 0,
+   "active": 0,
+   "nonzero_active": 0
+  },
+  "thresholds": {
+   "text_kl_lt": 0.05,
+   "chat_kl_lt": 0.05,
+   "digit_text_kl_lt": 0.05,
+   "addition_mean_n1_8_ge": 0.95
+  },
+  "meets_bar": true,
+  "meets_primary_bar": false,
+  "meets_strict_bar": false,
+  "params": 268098176,
+  "n_per_length": 200,
+  "section_seconds": {
+   "load_data": 0.8,
+   "addition": 84.7,
+   "length_n21_30": 115.4,
+   "chat_addition": 8.7,
+   "text_kl": 116.7,
+   "digit_text_kl": 58.7,
+   "chat_kl": 40.9
+  },
+  "seconds": 426.3,
+  "edit": null,
+  "cache_key": {
+   "checkpoint_sha256": "3fb9e8716c97002e1587209d3eb47760d1e6701c1a69561511f5ff2fb65e8f25",
+   "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+   "chat_hidden_sha256": "b9c40173767dcd982455e21cb4549f7179d13a65a72817ecd498a1806ccd55be",
+   "eval_code_sha256": "12e263952aa7c0acf7a9112e57fd7690ed26921d3ef579a28bcc598226b8ab0c",
+   "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+   "seeds": {
+    "addition": 4321,
+    "long": 4325,
+    "chat_addition": 4327,
+    "text": 0,
+    "digit_text": 7
+   },
+   "thresholds": {
+    "kl": 0.05,
+    "addition": 0.95,
+    "digit_frac": 0.03
+   },
+   "n_per": 200
+  }
+ },
+ "eval_key": {
+  "checkpoint_sha256": "3fb9e8716c97002e1587209d3eb47760d1e6701c1a69561511f5ff2fb65e8f25",
+  "tokenizer_sha256": "4667f2089529e8e7657cfb6d1c19910ae71ff5f28aa7ab2ff2763330affad795",
+  "chat_hidden_sha256": "b9c40173767dcd982455e21cb4549f7179d13a65a72817ecd498a1806ccd55be",
+  "eval_code_sha256": "12e263952aa7c0acf7a9112e57fd7690ed26921d3ef579a28bcc598226b8ab0c",
+  "dataset": "b08601e04326c79dfdd32d625aee71d232d685c3/wikitext-103-raw-v1",
+  "seeds": {
+   "addition": 4321,
+   "long": 4325,
+   "chat_addition": 4327,
+   "text": 0,
+   "digit_text": 7
+  },
+  "thresholds": {
+   "kl": 0.05,
+   "addition": 0.95,
+   "digit_frac": 0.03
+  },
+  "n_per": 200
+ },
+ "integrity": {
+  "violations": 0,
+  "corrupt_lines": 0,
+  "rows": []
+ },
+ "audit": {
+  "python_calls_scanned": 15,
+  "codex_turns_scanned": 31,
+  "codex_turns_tool_free": 31,
+  "violations": 0,
+  "flags": 0,
+  "counts": {},
+  "findings": []
+ },
+ "errors": {}
+}
