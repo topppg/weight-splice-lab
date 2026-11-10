@@ -1,0 +1,687 @@
+{
+ "edit": 10,
+ "turn": 131,
+ "final": true,
+ "note": "Submit unchanged edit 9: a format-gated arithmetic circuit built by hand and closed-form linear algebra, using 10 added attention heads and 423 added MLP neurons (7,365,760 added parameters). Implements digit identification, position/operand addressing, pair sums, carry propagation, fixed-length output and newline termination. Includes off-task guards, cancellation heads and normalization compensation; embedding and final norm remain untouched. Validation: reversed practice 1000/1000 N=1-20; independent validation 1000/1000 N=1-30; paired reference practice 200/200 plus 40/40 token-verified long/custom cases. Broader measured KL: Wikipedia 0.000390, chat replies 0.005239, number-rich text 0.000295. Final reference checks: prose 0.000200, chat reply-only 0.001719, numbers 0.000240. Plain addition 45/160 versus original43/160, zero correctness losses. Final chat-addition comparisons preserved substantive answers, with one post-answer token-sequence difference. Expected to generalize through explicit arithmetic rather than problem memorization; unseen evaluation remains unverified.",
+ "validation": {
+  "condition": "add_capacity",
+  "arch": {
+   "n_heads": [
+    4,
+    5,
+    6,
+    6,
+    6,
+    4,
+    7,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "d_mlp": [
+    2049,
+    2061,
+    2269,
+    2114,
+    2051,
+    2048,
+    2121,
+    2052,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2048,
+    2090
+   ]
+  },
+  "added_heads": [
+   0,
+   1,
+   2,
+   2,
+   2,
+   0,
+   3,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "added_neurons": [
+   1,
+   13,
+   221,
+   66,
+   3,
+   0,
+   73,
+   4,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   42
+  ],
+  "added_params": 7365760,
+  "tensors": {
+   "blocks.0.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2049
+    ],
+    "changed_entries": 1310721,
+    "native_changed_entries": 1310720,
+    "delta_norm": 1.224037,
+    "native_rel_change": 0.028672
+   },
+   "blocks.0.mlp.gate_proj.weight": {
+    "shape": [
+     2049,
+     640
+    ],
+    "changed_entries": 639,
+    "native_changed_entries": 0,
+    "delta_norm": 865.169617,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.mlp.up_proj.weight": {
+    "shape": [
+     2049,
+     640
+    ],
+    "changed_entries": 639,
+    "native_changed_entries": 0,
+    "delta_norm": 0.04419,
+    "native_rel_change": 0.0
+   },
+   "blocks.0.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": 99993.78125,
+    "native_rel_change": 592.427368
+   },
+   "blocks.1.attn.k_proj.weight": {
+    "shape": [
+     512,
+     640
+    ],
+    "changed_entries": 163840,
+    "native_changed_entries": 0,
+    "delta_norm": 11.202488,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1280
+    ],
+    "changed_entries": 1025,
+    "native_changed_entries": 1024,
+    "delta_norm": 100.001823,
+    "native_rel_change": 0.032672
+   },
+   "blocks.1.attn.q_proj.weight": {
+    "shape": [
+     1280,
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 0,
+    "delta_norm": 0.050462,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.attn.v_proj.weight": {
+    "shape": [
+     512,
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 0,
+    "delta_norm": 0.006487,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2061
+    ],
+    "changed_entries": 1310734,
+    "native_changed_entries": 1310720,
+    "delta_norm": 14142.305664,
+    "native_rel_change": 0.142117
+   },
+   "blocks.1.mlp.gate_proj.weight": {
+    "shape": [
+     2061,
+     640
+    ],
+    "changed_entries": 8294,
+    "native_changed_entries": 0,
+    "delta_norm": 342.99527,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.mlp.up_proj.weight": {
+    "shape": [
+     2061,
+     640
+    ],
+    "changed_entries": 7657,
+    "native_changed_entries": 0,
+    "delta_norm": 6.619586,
+    "native_rel_change": 0.0
+   },
+   "blocks.1.post_attn_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 1,
+    "native_changed_entries": 1,
+    "delta_norm": 999.59375,
+    "native_rel_change": 4.384976
+   },
+   "blocks.1.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 639,
+    "native_changed_entries": 639,
+    "delta_norm": 142521929826304.0,
+    "native_rel_change": 618071326720.0
+   },
+   "blocks.17.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2090
+    ],
+    "changed_entries": 1314657,
+    "native_changed_entries": 1310720,
+    "delta_norm": 12.937619,
+    "native_rel_change": 0.44958
+   },
+   "blocks.17.mlp.gate_proj.weight": {
+    "shape": [
+     2090,
+     640
+    ],
+    "changed_entries": 24568,
+    "native_changed_entries": 0,
+    "delta_norm": 6895527424.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.mlp.up_proj.weight": {
+    "shape": [
+     2090,
+     640
+    ],
+    "changed_entries": 42,
+    "native_changed_entries": 0,
+    "delta_norm": 0.255897,
+    "native_rel_change": 0.0
+   },
+   "blocks.17.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": Infinity,
+    "native_rel_change": Infinity
+   },
+   "blocks.2.attn.k_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 259910,
+    "native_changed_entries": 0,
+    "delta_norm": 1709053.5,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1536
+    ],
+    "changed_entries": 2052,
+    "native_changed_entries": 2048,
+    "delta_norm": 256.002808,
+    "native_rel_change": 0.050034
+   },
+   "blocks.2.attn.q_proj.weight": {
+    "shape": [
+     1536,
+     640
+    ],
+    "changed_entries": 1107,
+    "native_changed_entries": 0,
+    "delta_norm": 8978.136719,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.attn.v_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 2216,
+    "native_changed_entries": 0,
+    "delta_norm": 0.585362,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2269
+    ],
+    "changed_entries": 1310941,
+    "native_changed_entries": 1310720,
+    "delta_norm": 10.128521,
+    "native_rel_change": 0.053539
+   },
+   "blocks.2.mlp.gate_proj.weight": {
+    "shape": [
+     2269,
+     640
+    ],
+    "changed_entries": 122632,
+    "native_changed_entries": 0,
+    "delta_norm": 178051207921664.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.mlp.up_proj.weight": {
+    "shape": [
+     2269,
+     640
+    ],
+    "changed_entries": 221,
+    "native_changed_entries": 0,
+    "delta_norm": 106985424.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.2.post_attn_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 1414207.625,
+    "native_rel_change": 10746.810547
+   },
+   "blocks.2.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": 1369306306707456.0,
+    "native_rel_change": 3923634552832.0
+   },
+   "blocks.3.attn.k_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 259913,
+    "native_changed_entries": 0,
+    "delta_norm": 1921295.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1536
+    ],
+    "changed_entries": 2052,
+    "native_changed_entries": 2048,
+    "delta_norm": 256.001129,
+    "native_rel_change": 0.049468
+   },
+   "blocks.3.attn.q_proj.weight": {
+    "shape": [
+     1536,
+     640
+    ],
+    "changed_entries": 1108,
+    "native_changed_entries": 0,
+    "delta_norm": 16556.921875,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.attn.v_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 2216,
+    "native_changed_entries": 0,
+    "delta_norm": 1.481457,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2114
+    ],
+    "changed_entries": 1313116,
+    "native_changed_entries": 1310720,
+    "delta_norm": 10.523984,
+    "native_rel_change": 0.206642
+   },
+   "blocks.3.mlp.gate_proj.weight": {
+    "shape": [
+     2114,
+     640
+    ],
+    "changed_entries": 36562,
+    "native_changed_entries": 0,
+    "delta_norm": 8969705800859648.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.mlp.up_proj.weight": {
+    "shape": [
+     2114,
+     640
+    ],
+    "changed_entries": 66,
+    "native_changed_entries": 0,
+    "delta_norm": 0.009843,
+    "native_rel_change": 0.0
+   },
+   "blocks.3.post_attn_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 1414178.625,
+    "native_rel_change": 4598.732422
+   },
+   "blocks.3.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": 4808845637451776.0,
+    "native_rel_change": 5399017160704.0
+   },
+   "blocks.4.attn.k_norm.weight": {
+    "shape": [
+     256
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 17.833029,
+    "native_rel_change": 0.476431
+   },
+   "blocks.4.attn.k_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 261199,
+    "native_changed_entries": 1280,
+    "delta_norm": 1498125.0,
+    "native_rel_change": 0.040946
+   },
+   "blocks.4.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1536
+    ],
+    "changed_entries": 2052,
+    "native_changed_entries": 2048,
+    "delta_norm": 256.001007,
+    "native_rel_change": 0.043217
+   },
+   "blocks.4.attn.q_norm.weight": {
+    "shape": [
+     256
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 22.785942,
+    "native_rel_change": 1.139075
+   },
+   "blocks.4.attn.q_proj.weight": {
+    "shape": [
+     1536,
+     640
+    ],
+    "changed_entries": 6245,
+    "native_changed_entries": 5120,
+    "delta_norm": 20024.042969,
+    "native_rel_change": 0.044318
+   },
+   "blocks.4.attn.v_proj.weight": {
+    "shape": [
+     768,
+     640
+    ],
+    "changed_entries": 2216,
+    "native_changed_entries": 0,
+    "delta_norm": 7.275257,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2051
+    ],
+    "changed_entries": 1310723,
+    "native_changed_entries": 1310720,
+    "delta_norm": 10.010155,
+    "native_rel_change": 0.032397
+   },
+   "blocks.4.mlp.gate_proj.weight": {
+    "shape": [
+     2051,
+     640
+    ],
+    "changed_entries": 1659,
+    "native_changed_entries": 0,
+    "delta_norm": 4155705393152.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.mlp.up_proj.weight": {
+    "shape": [
+     2051,
+     640
+    ],
+    "changed_entries": 3,
+    "native_changed_entries": 0,
+    "delta_norm": 2646257.5,
+    "native_rel_change": 0.0
+   },
+   "blocks.4.post_attn_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 1414207.625,
+    "native_rel_change": 4336.001465
+   },
+   "blocks.4.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 635,
+    "native_changed_entries": 635,
+    "delta_norm": 790569395683328.0,
+    "native_rel_change": 1124802232320.0
+   },
+   "blocks.6.attn.k_norm.weight": {
+    "shape": [
+     256
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 15.050035,
+    "native_rel_change": 0.593577
+   },
+   "blocks.6.attn.k_proj.weight": {
+    "shape": [
+     1024,
+     640
+    ],
+    "changed_entries": 391163,
+    "native_changed_entries": 1280,
+    "delta_norm": 3497627.5,
+    "native_rel_change": 0.037516
+   },
+   "blocks.6.attn.o_proj.weight": {
+    "shape": [
+     640,
+     1792
+    ],
+    "changed_entries": 3079,
+    "native_changed_entries": 3072,
+    "delta_norm": 300.188507,
+    "native_rel_change": 0.044717
+   },
+   "blocks.6.attn.q_norm.weight": {
+    "shape": [
+     256
+    ],
+    "changed_entries": 2,
+    "native_changed_entries": 2,
+    "delta_norm": 15.720183,
+    "native_rel_change": 1.297575
+   },
+   "blocks.6.attn.q_proj.weight": {
+    "shape": [
+     1792,
+     640
+    ],
+    "changed_entries": 6816,
+    "native_changed_entries": 5120,
+    "delta_norm": 60619.636719,
+    "native_rel_change": 0.05085
+   },
+   "blocks.6.attn.v_proj.weight": {
+    "shape": [
+     1024,
+     640
+    ],
+    "changed_entries": 3324,
+    "native_changed_entries": 0,
+    "delta_norm": 35.920319,
+    "native_rel_change": 0.0
+   },
+   "blocks.6.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2121
+    ],
+    "changed_entries": 1310793,
+    "native_changed_entries": 1310720,
+    "delta_norm": 10.032123,
+    "native_rel_change": 0.046894
+   },
+   "blocks.6.mlp.gate_proj.weight": {
+    "shape": [
+     2121,
+     640
+    ],
+    "changed_entries": 40514,
+    "native_changed_entries": 0,
+    "delta_norm": 316152140005376.0,
+    "native_rel_change": 0.0
+   },
+   "blocks.6.mlp.up_proj.weight": {
+    "shape": [
+     2121,
+     640
+    ],
+    "changed_entries": 73,
+    "native_changed_entries": 0,
+    "delta_norm": 0.033986,
+    "native_rel_change": 0.0
+   },
+   "blocks.6.post_attn_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 3,
+    "native_changed_entries": 3,
+    "delta_norm": 1732034.125,
+    "native_rel_change": 3662.417236
+   },
+   "blocks.6.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": 1118033942675456.0,
+    "native_rel_change": 1246045929472.0
+   },
+   "blocks.7.mlp.down_proj.weight": {
+    "shape": [
+     640,
+     2052
+    ],
+    "changed_entries": 1310724,
+    "native_changed_entries": 1310720,
+    "delta_norm": 10.019527,
+    "native_rel_change": 0.032675
+   },
+   "blocks.7.mlp.gate_proj.weight": {
+    "shape": [
+     2052,
+     640
+    ],
+    "changed_entries": 2220,
+    "native_changed_entries": 0,
+    "delta_norm": 2933920.75,
+    "native_rel_change": 0.0
+   },
+   "blocks.7.mlp.up_proj.weight": {
+    "shape": [
+     2052,
+     640
+    ],
+    "changed_entries": 4,
+    "native_changed_entries": 0,
+    "delta_norm": 4.376865,
+    "native_rel_change": 0.0
+   },
+   "blocks.7.post_mlp_norm.weight": {
+    "shape": [
+     640
+    ],
+    "changed_entries": 640,
+    "native_changed_entries": 640,
+    "delta_norm": 790569395683328.0,
+    "native_rel_change": 936470708224.0
+   }
+  }
+ }
+}

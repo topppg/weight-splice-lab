@@ -1,0 +1,200 @@
+{
+ "edit": "edit.pt",
+ "chunks": 256,
+ "mean_kl": 0.4450231977957628,
+ "share_of_kl_in_worst_5": 0.9976738064483427,
+ "mean_kl_without_worst_5": 0.0010558318080514135,
+ "spike_threshold": 0.5,
+ "chunks_with_spikes": [
+  {
+   "chunk": 104,
+   "mean_kl": 68.0987777709961,
+   "max_kl": 137.45945739746094,
+   "positions_over_spike": 169,
+   "onset": 86,
+   "context": " included special forces , rotary and fixed wing aviation and naval units . Army units included elements from the SASR",
+   "edited_next": "00089804",
+   "base_next": ", the10 Army. and Marines"
+  },
+  {
+   "chunk": 188,
+   "mean_kl": 38.52996826171875,
+   "max_kl": 132.17977905273438,
+   "positions_over_spike": 85,
+   "onset": 170,
+   "context": " 9 ) , WOKK ( FM 97 @.@ 1 ) , WEXR",
+   "edited_next": "\n\n\n\n\n\n\n\n",
+   "base_next": " ( FM 901 @.@"
+  },
+  {
+   "chunk": 178,
+   "mean_kl": 5.222162246704102,
+   "max_kl": 109.81993865966797,
+   "positions_over_spike": 177,
+   "onset": 51,
+   "context": " homes lost their roofs due to high winds . Portions of Colima , Chiapas , Michoacán",
+   "edited_next": "<pad> theMex experienced rainfall and\n\n,",
+   "base_next": " and the are significant rainfall and the,"
+  },
+  {
+   "chunk": 221,
+   "mean_kl": 1.0971695184707642,
+   "max_kl": 22.574464797973633,
+   "positions_over_spike": 125,
+   "onset": 31,
+   "context": " of unbelievable than unremarkable , and I 'm interested to see if Abrams has any more tricks up his sleeve",
+   "edited_next": "8s But,, the,,",
+   "base_next": ".\"\n\n\n\n,, the News,"
+  },
+  {
+   "chunk": 244,
+   "mean_kl": 0.7128470540046692,
+   "max_kl": 65.19984436035156,
+   "positions_over_spike": 78,
+   "onset": 17,
+   "context": " would be a very dreary thing indeed . So the time honored get @-@ toget",
+   "edited_next": "jsonplaceholder@ the city business, going amazing",
+   "base_next": ".. the team business. a important"
+  },
+  {
+   "chunk": 3,
+   "mean_kl": 0.022261571139097214,
+   "max_kl": 5.620233058929443,
+   "positions_over_spike": 1,
+   "onset": 254,
+   "context": " , the entire eastern half of Lower Burma ( Pegu and Martaban ) was in open revolt . ",
+   "edited_next": "</strong>",
+   "base_next": "\n"
+  },
+  {
+   "chunk": 42,
+   "mean_kl": 0.017226120457053185,
+   "max_kl": 3.823834180831909,
+   "positions_over_spike": 1,
+   "onset": 231,
+   "context": " than that of H. americanus , and the European species is considered to have a better flavour . ",
+   "edited_next": "\n\n\n\n\n\n\n\n\n sters are generally carnivorous for the",
+   "base_next": "\n sters are generally carnivorous for the"
+  },
+  {
+   "chunk": 108,
+   "mean_kl": 0.017111865803599358,
+   "max_kl": 4.3149590492248535,
+   "positions_over_spike": 1,
+   "onset": 240,
+   "context": " several male backup dancers performed slow and ample dance routines behind Carey on a higher level of the stage . ",
+   "edited_next": "\n\n\n\n\n\n\n\n\nThe the show performance of the show",
+   "base_next": "\nThe the show performance of the show"
+  },
+  {
+   "chunk": 90,
+   "mean_kl": 0.015005730092525482,
+   "max_kl": 3.7582719326019287,
+   "positions_over_spike": 1,
+   "onset": 237,
+   "context": " Captain Pat Travers , Air Rhodesia 's general manager , called a \" downright , deliberate lie \" . ",
+   "edited_next": "</strong>The to the,,elius,",
+   "base_next": "\nThe to the,,elius,"
+  },
+  {
+   "chunk": 115,
+   "mean_kl": 0.01493515633046627,
+   "max_kl": 3.7492761611938477,
+   "positions_over_spike": 1,
+   "onset": 253,
+   "context": " government . His work features controversial and provocative views , written in a direct , often confrontational style . ",
+   "edited_next": "</strong> =",
+   "base_next": "\n ="
+  },
+  {
+   "chunk": 124,
+   "mean_kl": 0.012470620684325695,
+   "max_kl": 3.051586151123047,
+   "positions_over_spike": 1,
+   "onset": 242,
+   "context": " from the inordinate quantity of swearing , plus a smattering of homophobia and misogyny . \" ",
+   "edited_next": " ChernThe ofs David W'Malley",
+   "base_next": "\n\nThe ofs David W'Malley"
+  },
+  {
+   "chunk": 174,
+   "mean_kl": 0.012234526686370373,
+   "max_kl": 2.7980332374572754,
+   "positions_over_spike": 1,
+   "onset": 251,
+   "context": " have been reported . These are typically referred to as retro @-@ Nazarov cyclization reactions . ",
+   "edited_next": "\n = = =",
+   "base_next": "\n = = ="
+  },
+  {
+   "chunk": 98,
+   "mean_kl": 0.010632016696035862,
+   "max_kl": 2.636587381362915,
+   "positions_over_spike": 1,
+   "onset": 247,
+   "context": ". The pyramid was topped by a three chambered shrine , the rooms situated one behind the other . ",
+   "edited_next": "\n The 35 is  ",
+   "base_next": "\n The 35 is  "
+  },
+  {
+   "chunk": 125,
+   "mean_kl": 0.010363033972680569,
+   "max_kl": 2.5787272453308105,
+   "positions_over_spike": 1,
+   "onset": 230,
+   "context": " peat led to ' turf scalping ' for fuel and the bare areas of rock in the interior . ",
+   "edited_next": "\n\n\n\n\n\n\n\n\nThe island point of the island is",
+   "base_next": "\nThe island point of the island is"
+  },
+  {
+   "chunk": 116,
+   "mean_kl": 0.008618109859526157,
+   "max_kl": 2.103574752807617,
+   "positions_over_spike": 1,
+   "onset": 245,
+   "context": " episode 's writers , he told that \" Sailor Mouth \" is his second favorite SpongeBob episode . ",
+   "edited_next": "\n\nThe = Review\n = Analysis =",
+   "base_next": "\n\nThe = Review\n = Analysis ="
+  },
+  {
+   "chunk": 41,
+   "mean_kl": 0.0071298652328550816,
+   "max_kl": 1.6502705812454224,
+   "positions_over_spike": 1,
+   "onset": 219,
+   "context": " ; for instance , he can pierce enemies with the shadow tendrils or use them to throw weapons . ",
+   "edited_next": "\n\nHeamaru is the world with",
+   "base_next": "\n\nHeamaru is the world with"
+  },
+  {
+   "chunk": 179,
+   "mean_kl": 0.005848574917763472,
+   "max_kl": 1.416325569152832,
+   "positions_over_spike": 1,
+   "onset": 250,
+   "context": " included Slingersfontein , Pink Hill , Rhenosterkop and Haartebeestefontein . ",
+   "edited_next": "\nThe were also only",
+   "base_next": "\nThe were also only"
+  },
+  {
+   "chunk": 35,
+   "mean_kl": 0.004956271965056658,
+   "max_kl": 1.2026784420013428,
+   "positions_over_spike": 1,
+   "onset": 251,
+   "context": " blocks before printing ; this enabled him to achieve gradation and modulation of shades which were not previously possible . ",
+   "edited_next": "\n\nThe addition cases",
+   "base_next": "\n\nThe addition cases"
+  },
+  {
+   "chunk": 218,
+   "mean_kl": 0.00303090107627213,
+   "max_kl": 0.6906803250312805,
+   "positions_over_spike": 1,
+   "onset": 246,
+   "context": " , who were allied with the anti @-@ revolutionary , CIA @-@ backed Contras . ",
+   "edited_next": "\n  and as the Finnonhan",
+   "base_next": "\n  and as the Millerinnonhan"
+  }
+ ]
+}

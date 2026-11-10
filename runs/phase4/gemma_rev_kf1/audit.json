@@ -1,0 +1,192 @@
+{
+ "python_calls_scanned": 71,
+ "codex_turns_scanned": 131,
+ "codex_turns_tool_free": 131,
+ "violations": 8,
+ "flags": 14,
+ "counts": {
+  "autograd/violation": 3,
+  "kernel_integrity/live_grad_tensor/violation": 1,
+  "model_execution/flag": 4,
+  "model_execution/violation": 4,
+  "search_loop/flag": 10
+ },
+ "findings": [
+  {
+   "turn": 8,
+   "run": 7,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 27",
+   "text": "for name,t in [(\"gate_proj.weight\",g),(\"up_proj.weight\",u),(\"down_proj.weight\",d)]:"
+  },
+  {
+   "turn": 15,
+   "run": 10,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 57",
+   "text": "for s,t in [(\"q_proj.weight\",qn),(\"k_proj.weight\",kn),(\"v_proj.weight\",vn),(\"o_proj.weight\",on)]:"
+  },
+  {
+   "turn": 19,
+   "run": 14,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 62",
+   "text": "for s,t in [(\"gate_proj.weight\",gg),(\"up_proj.weight\",uu),(\"down_proj.weight\",dd)]:"
+  },
+  {
+   "turn": 25,
+   "run": 18,
+   "rule": "model_execution",
+   "severity": "flag",
+   "where": "code line 162",
+   "text": "exec(setup)"
+  },
+  {
+   "turn": 25,
+   "run": 18,
+   "rule": "model_execution",
+   "severity": "violation",
+   "where": "code line 162",
+   "text": "exec(setup)"
+  },
+  {
+   "turn": 27,
+   "run": 20,
+   "rule": "model_execution",
+   "severity": "flag",
+   "where": "code line 27",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 27,
+   "run": 20,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 7",
+   "text": "for l in [4,6]:"
+  },
+  {
+   "turn": 27,
+   "run": 20,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 8",
+   "text": "for kind,nhead in [(\"q\",4),(\"k\",1)]:"
+  },
+  {
+   "turn": 27,
+   "run": 20,
+   "rule": "model_execution",
+   "severity": "violation",
+   "where": "code line 27",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 27,
+   "run": 20,
+   "rule": "kernel_integrity/live_grad_tensor",
+   "severity": "violation",
+   "where": "kernel check after the cell",
+   "text": "namespace module 'm' has requires_grad=True"
+  },
+  {
+   "turn": 28,
+   "run": 21,
+   "rule": "autograd",
+   "severity": "violation",
+   "where": "code line 3",
+   "text": "src=src.replace('    named=dict(m.named_parameters())','    m.requires_grad_(False)\\n    named=dict(m.named_parameters())')"
+  },
+  {
+   "turn": 28,
+   "run": 21,
+   "rule": "model_execution",
+   "severity": "flag",
+   "where": "code line 5",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 28,
+   "run": 21,
+   "rule": "autograd",
+   "severity": "violation",
+   "where": "code line 6",
+   "text": "m.requires_grad_(False)"
+  },
+  {
+   "turn": 28,
+   "run": 21,
+   "rule": "autograd",
+   "severity": "violation",
+   "where": "code line 45",
+   "text": "f.write(\"\\nGrowth-helper integrity issue: new nn.Parameters had requires_grad=True despite disabled autograd; no backward/optimization used. sync now calls requires_grad_(False) immediately after grow"
+  },
+  {
+   "turn": 28,
+   "run": 21,
+   "rule": "model_execution",
+   "severity": "violation",
+   "where": "code line 5",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 31,
+   "run": 22,
+   "rule": "model_execution",
+   "severity": "flag",
+   "where": "code line 17",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 31,
+   "run": 22,
+   "rule": "model_execution",
+   "severity": "violation",
+   "where": "code line 17",
+   "text": "exec(src[src.index(\"def sync():\"):])"
+  },
+  {
+   "turn": 39,
+   "run": 28,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 3",
+   "text": "for l in [2,3,4,6]:"
+  },
+  {
+   "turn": 39,
+   "run": 28,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 26",
+   "text": "for suffix,W in [(\"q_proj.weight\",Q),(\"k_proj.weight\",K),(\"v_proj.weight\",V),(\"o_proj.weight\",O)]:"
+  },
+  {
+   "turn": 50,
+   "run": 37,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 4",
+   "text": "for l,v in normfix.items():"
+  },
+  {
+   "turn": 50,
+   "run": 37,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 11",
+   "text": "for l,guard in newguards.items():"
+  },
+  {
+   "turn": 70,
+   "run": 55,
+   "rule": "search_loop",
+   "severity": "flag",
+   "where": "code line 2",
+   "text": "for l,v in gateinfo.items():"
+  }
+ ]
+}
