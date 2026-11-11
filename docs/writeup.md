@@ -1,4 +1,4 @@
-# Reproducing Weight-Space Programming, and an agent that adds a capability
+# Reproducing Sparks of Weight-Space Programming, and an agent that adds a capability
 
 Status: final (2026-11-11); the project has stopped. Every number here comes from a file in this
 repo (`runs/` or `docs/`). It is independent work and not peer reviewed.
@@ -18,7 +18,7 @@ repo (`runs/` or `docs/`). It is independent work and not peer reviewed.
     be written in, not a clean counterexample.
   - The editor's own drift checks, on short practice windows, measured 0.0004.
 
-- We reproduce the headline edit of Takehi et al. (MIT CSAIL, Nov 2026, "Weight-Space Programming"):
+- We reproduce the headline edit of Takehi et al. (MIT CSAIL, Nov 2026, "Sparks of Weight-Space Programming"):
   all three published Qwen3.5-0.8B edits rebuild bit-exact, and we re-derive the "loop direction"
   from the logged texts (|cos| 0.99998 with the published one, 64/64 and 63/64 neuron overlap).
 - Re-scoring the paper's own published generations at shorter output caps shows the gain is a
@@ -67,7 +67,7 @@ repo (`runs/` or `docs/`). It is independent work and not peer reviewed.
   operands + `=` + reversed sum).
 - Hand-compiled splice: closed-form writes only (SVD/pseudoinverse of the unembedding, covariance
   eigendecompositions, ridge probes), added heads/neurons, native weights untouched.
-- Result: ungated 100% addition N=1..8 but text KL 0.65 and native ≤ 0.10; gated KL 0.04 but
+- Result: ungated 100% addition N=1..8 but text KL 0.65 and native ≤ 0.17 (copy 0.17, reverse 0.06, max 0.09); gated KL 0.04 but
   collapses past N=4. No configuration met the bar (KL < 0.05, native ≥ 0.98).
 - Why: no quiet residual directions (superposition), bias-free RMSNorm/SwiGLU gives no threshold,
   and the digit-read interface itself breaks native digit circuits.
@@ -156,8 +156,8 @@ repo (`runs/` or `docs/`). It is independent work and not peer reviewed.
   - Budget: 50 passes, 131 turns, 2 weekly points.
   - The edit: a hand-built, format-gated circuit in 10 added heads and 423 added neurons (7.37M
     added params), plus native norm compensation.
-  - Hidden eval: reversed addition **1.000 at every N = 1–30** (200 per N; practice went only to
-    N = 20). Plain addition is preserved: 0.263 against 0.261.
+  - Hidden eval: reversed addition **1.000 at every N = 1–30** (200 per N). The practice set
+    went to N = 20, but the editor generated its own problems up to N = 30 and repaired a long-length failure while building the circuit, so these are fresh problems but not lengths it never checked. Plain addition is preserved: 0.263 against 0.261.
   - KL: text **0.445**, chat **0.086**, digit text 0.005. It fails the bar.
   - The editor's own estimates on practice data: Wikipedia 0.0004, chat 0.005, numbers 0.0003.
 - Where the text KL comes from (`experiments/phase4/diagnose_kl.py` →
@@ -182,7 +182,7 @@ repo (`runs/` or `docs/`). It is independent work and not peer reviewed.
   `result.json` records `audit_ok: false` (8 violations, 14 flags), all explained in the first-pass
   check above but not formally reviewed.
 - Reading: on Gemma 270M a missing algorithm (reversed format) was written in by hand, and it
-  generalised beyond the practice lengths (n = 1). The run does not meet our own success criterion.
+  holds on fresh problems up to N = 30, lengths the editor had itself tested (n = 1). The run does not meet our own success criterion.
   Keeping the addition silent on arbitrary text is the unsolved part, as in the phase 2 toy splice.
 
 ## 7. Limitations
