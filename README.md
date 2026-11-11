@@ -3,7 +3,7 @@
 **Can an LLM agent *add* a capability to a pretrained model by writing its weights directly, with
 no gradients and no training?**
 
-Takehi et al. ("Weight-Space Programming", MIT CSAIL, Nov 2026) showed that GPT-6 Astra, editing
+Takehi et al. ("Sparks of Weight-Space Programming", MIT CSAIL, Nov 2026) showed that GPT-6 Astra, editing
 weights directly, could lift Qwen3.5-0.8B on MATH-500 from 7.9% to 48.1% by removing a repetition
 direction. They also reported that on Gemma 3 270M "editing weights could remove an obstacle that
 hid an ability, but it could not add an ability the model lacked."

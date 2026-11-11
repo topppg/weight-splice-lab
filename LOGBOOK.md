@@ -16,7 +16,7 @@
 - Phase 2 done (`docs/phase2-toy.md`). Base toy: 5.14M params, 1.70 bpc text, 100% copy/reverse/max,
   ~0% addition. Hand-compiled closed-form splice (added heads/neurons only, native weights untouched)
   reaches 100% addition at N=1..8 (95–100% to N=20) but wrecks the model (text KL 0.65–0.99, native
-  tasks ≤ 0.10). Gated variant is quiet (KL 0.04) but inaccurate past N=4 and unstable across probe
+  tasks ≤ 0.17). Gated variant is quiet (KL 0.04) but inaccurate past N=4 and unstable across probe
   samples. No config meets KL < 0.05 and native ≥ 0.98. LoRA r8 needs 3k examples for 100% N≤8
   and forgets everything without replay; replay run pending.
   Key finding: adding the capability is easy, making it silent off-task is hard — no quiet residual

@@ -266,7 +266,7 @@ native norms and q/k norms and makes small changes to native o/down/q/k projecti
 
 - Arithmetic: every hidden reversed problem from N = 1 to 30 is correct (200 per N), with
   carries, the fixed N+1 length and termination. The editor added an algorithm that the model
-  lacked and that generalises past the practice lengths.
+  lacked. The practice set went to N = 20, but the editor generated its own problems up to N = 30 and repaired a long-length failure while building the circuit, so these are fresh problems but not lengths it never checked.
 - Off-task: the editor's own in-kernel estimates were far lower than the hidden values. It
   measured Wikipedia 0.0004 (6,012 positions in windows of 120 tokens or fewer), chat 0.005 and
   numbers 0.0003. Diagnosed after the run on the hidden text chunks
@@ -312,7 +312,7 @@ What the evidence supports (n = 1 per condition, so these are existence results,
   budget.
 - When it may also run the model in its kernel (still no gradients and no search over weight
   values), the editor wrote in an algorithm the model lacked: reversed-digit addition, from 0.9%
-  to 100% for N1–8, and 100% up to N = 30, beyond the practice lengths. It did this by writing
+  to 100% for N1–8, and 100% up to N = 30, on fresh problems (the editor had tested its own problems up to N = 30). It did this by writing
   weights in closed form and by hand. It is evidence that the ability can be added, but not a
   clean counterexample to "editing could not add an ability":
   - the run fails our own pre-registered bar (text KL 0.445, chat KL 0.086);
